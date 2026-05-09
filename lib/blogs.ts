@@ -13,114 +13,123 @@ export type BlogPost = {
 
 export const blogs: BlogPost[] = [
   {
-    title: "Understanding Your Dosha: A Beginner's Guide to Ayurveda",
-    slug: "understanding-your-dosha",
-    metaTitle: "Understanding Your Dosha — A Beginner's Guide to Ayurveda",
+    title: "FUE vs DHT — Which Hair Transplant Technique Is Right for You?",
+    slug: "fue-vs-dht-hair-transplant",
+    metaTitle:
+      "FUE vs DHT Hair Transplant — Which Technique Is Right for You?",
     metaDescription:
-      "Learn the fundamentals of Ayurvedic doshas — Vata, Pitta, and Kapha — and how knowing your constitution helps shape food, routine, and wellness choices.",
+      "A clear, dermatologist-written comparison of FUE and DHT hair transplant techniques — how each works, who they suit, and what results to expect.",
     excerpt:
-      "Ayurveda begins with a simple idea — that each of us is built differently, and that wellness comes from understanding that difference.",
-    publishedDate: "2026-04-12",
+      "Both FUE and DHT can deliver excellent results — but they suit different patients. Here is how we choose between them in our practice.",
+    publishedDate: "2026-04-22",
     author: "Dr. Aarav Mehta",
-    category: "Ayurveda Basics",
-    readingTime: "6 min read",
-    content: [
-      {
-        heading: "What is a dosha?",
-        body: "In Ayurveda, every person carries a unique combination of three biological energies — Vata, Pitta, and Kapha. These doshas govern how we move, digest, sleep, and respond to stress. Knowing your dominant dosha is the first step toward understanding why certain foods, climates, and routines work for you and others don't.",
-      },
-      {
-        heading: "Vata, Pitta, and Kapha at a glance",
-        body: "Vata is associated with movement, creativity, and quickness. Pitta governs metabolism, focus, and transformation. Kapha brings steadiness, strength, and patience. Most people are a blend of two, with one tending to lead.",
-      },
-      {
-        heading: "Why constitution matters",
-        body: "Generic wellness advice often fails because it ignores constitution. A diet that energizes one person can disturb another. Once you know your dosha, food, sleep, and movement choices become far more precise — and far easier to sustain.",
-      },
-      {
-        heading: "Where to begin",
-        body: "Start by observing — your appetite, sleep, energy curves, and how you respond to weather and stress. Pair these observations with a thoughtful consultation. The combination of self-observation and trained guidance creates a starting point you can actually act on.",
-      },
-    ],
-  },
-  {
-    title: "The Quiet Power of a Morning Routine",
-    slug: "the-quiet-power-of-a-morning-routine",
-    metaTitle: "The Quiet Power of a Morning Routine — Ayurvedic Dinacharya",
-    metaDescription:
-      "How an Ayurvedic morning routine — Dinacharya — supports digestion, mental clarity, and long-term wellbeing in a few simple, repeatable steps.",
-    excerpt:
-      "The first hour of the day shapes the rest of it. Ayurveda has known this for thousands of years.",
-    publishedDate: "2026-03-28",
-    author: "Dr. Meera Iyer",
-    category: "Lifestyle",
-    readingTime: "5 min read",
-    content: [
-      {
-        heading: "Why mornings matter",
-        body: "Ayurveda places enormous weight on the first hour after waking. This is when digestion, mood, and energy patterns get set for the day. A good morning is not about being productive — it is about entering the day with steadiness.",
-      },
-      {
-        heading: "A simple Dinacharya",
-        body: "A classical morning routine includes warm water, gentle movement, breath work, and a slow, warm meal. Each element is small. Together, they create a rhythm the body can rely on.",
-      },
-      {
-        heading: "Make it your own",
-        body: "The point is consistency, not perfection. Pick three small practices you can keep for thirty days. Notice what changes. Adjust slowly.",
-      },
-    ],
-  },
-  {
-    title: "Foods That Calm the Nervous System",
-    slug: "foods-that-calm-the-nervous-system",
-    metaTitle: "Foods That Calm the Nervous System — Ayurvedic Nutrition",
-    metaDescription:
-      "Discover Ayurvedic foods and meal patterns that support a calm nervous system, better sleep, and steadier energy through the day.",
-    excerpt:
-      "Some foods quietly settle the nervous system. Others quietly stir it up. Knowing the difference changes everything.",
-    publishedDate: "2026-03-10",
-    author: "Dr. Aarav Mehta",
-    category: "Nutrition",
+    category: "Hair Transplant",
     readingTime: "7 min read",
     content: [
       {
-        heading: "The food–nervous system connection",
-        body: "What we eat directly shapes our nervous system through the gut, blood sugar, and inflammatory load. Ayurveda has long recognized this — long before modern science caught up.",
+        heading: "How FUE works",
+        body: "Follicular Unit Extraction (FUE) harvests individual follicular units from the donor area using a tiny circular punch. The grafts are then implanted one by one into the recipient zone. There are no linear scars and recovery is quick — most patients return to office work within a week.",
       },
       {
-        heading: "Calming foods",
-        body: "Warm, cooked, slightly oily, lightly spiced meals tend to calm the system. Think of stews, soups, ghee-cooked grains, and warm milk with a touch of cardamom. Avoid cold, raw, or heavily processed foods when stress is high.",
+        heading: "How DHT (Direct Hair Transplant) differs",
+        body: "DHT is a refinement of FUE in which extracted grafts are implanted immediately, without an intermediate holding step. This shortens the time grafts spend out of the body, which can improve survival rates and growth density in the right hands.",
       },
       {
-        heading: "Eating rhythm matters",
-        body: "Three steady meals at consistent times often does more for the nervous system than any single 'superfood'. Predictability is medicine.",
+        heading: "Who suits which technique",
+        body: "FUE is the workhorse — appropriate for most patients seeking a natural restoration. DHT shines when graft survival needs to be maximised, such as in cases with limited donor area or tight density goals. Your dermatologist will recommend the right approach after a scalp assessment.",
+      },
+      {
+        heading: "Results and timelines",
+        body: "Whichever technique is chosen, the timeline is similar — initial shedding around weeks 2–4, new growth from month 3, visible density at month 6, and final result at month 12.",
       },
     ],
   },
   {
-    title: "Why Breath Work Is the Fastest Way to Calm",
-    slug: "why-breath-work-is-the-fastest-way-to-calm",
-    metaTitle: "Why Breath Work Is the Fastest Way to Calm — Pranayama",
+    title: "What Actually Causes Adult Acne — A Dermatologist's View",
+    slug: "what-causes-adult-acne",
+    metaTitle: "What Actually Causes Adult Acne — A Dermatologist's View",
     metaDescription:
-      "A clear introduction to pranayama — why slow, conscious breathing calms the nervous system faster than almost any other tool.",
+      "A dermatologist explains the real drivers of adult acne — hormones, skin barrier, diet, and stress — and the order to treat them in.",
     excerpt:
-      "Breath is the only autonomic system you can take direct control of. That makes it powerful.",
-    publishedDate: "2026-02-22",
+      "Adult acne is rarely about one thing. It is usually a combination — and treating it well means addressing the right driver first.",
+    publishedDate: "2026-04-08",
     author: "Dr. Meera Iyer",
-    category: "Practice",
-    readingTime: "4 min read",
+    category: "Skin Care",
+    readingTime: "6 min read",
     content: [
       {
-        heading: "The breath–stress loop",
-        body: "When we are stressed, our breath shortens. When our breath shortens, the body assumes there is danger, and stress deepens. The loop runs in both directions, which means we can also reverse it intentionally.",
+        heading: "Hormones, even when bloodwork looks normal",
+        body: "The most common driver of adult acne in women is androgen sensitivity at the follicle — even when serum hormone levels are within range. This is why oral contraceptives, spironolactone, and topical anti-androgens often outperform standard topicals.",
       },
       {
-        heading: "A simple practice",
-        body: "Inhale for four counts. Exhale for six. Repeat for two minutes. The slightly longer exhale is the key — it engages the parasympathetic system, which is what brings the body into calm.",
+        heading: "Skin barrier damage from over-treatment",
+        body: "Many patients arrive after months of layering harsh actives — retinoids, acids, scrubs, salicylic washes. The skin barrier is exhausted, the microbiome is disrupted, and acne is worse, not better. Step one in these cases is barrier repair, not more actives.",
       },
       {
-        heading: "When to use it",
-        body: "Before difficult conversations, after long screen sessions, on the way to sleep. The practice is small enough to do anywhere and reliable enough to lean on.",
+        heading: "Diet, but not the foods you'd expect",
+        body: "Whey protein, high-glycemic foods, and certain dairy patterns are far more strongly linked to adult acne than chocolate or fried food in the literature. Patterns matter more than single ingredients.",
+      },
+      {
+        heading: "What to do first",
+        body: "Repair the barrier for 2–4 weeks before introducing new actives. Identify the dominant driver — hormonal, inflammatory, or comedonal — and treat that first. Stop layering products you read about online.",
+      },
+    ],
+  },
+  {
+    title: "PRP for Hair Loss — When It Works, and When It Doesn't",
+    slug: "prp-for-hair-loss",
+    metaTitle: "PRP for Hair Loss — When It Works, and When It Doesn't",
+    metaDescription:
+      "Platelet-Rich Plasma can meaningfully reduce hair fall — but only in the right patient. Here is who PRP suits and who is better served by other options.",
+    excerpt:
+      "PRP works beautifully for some patients and almost not at all for others. The difference is patient selection.",
+    publishedDate: "2026-03-18",
+    author: "Dr. Aarav Mehta",
+    category: "Hair Care",
+    readingTime: "5 min read",
+    content: [
+      {
+        heading: "Who PRP works best for",
+        body: "Early-stage androgenetic alopecia, telogen effluvium recovery, and as a companion therapy after a hair transplant. In these settings, PRP can reduce shedding within 8–12 weeks and improve hair calibre over six months.",
+      },
+      {
+        heading: "Who PRP is wrong for",
+        body: "Advanced miniaturisation, scarring alopecia, and very late-stage hair loss are not good candidates. In these cases, PRP can give a small temporary improvement but is not a long-term solution.",
+      },
+      {
+        heading: "What a real protocol looks like",
+        body: "A clinical PRP protocol is 3–4 sessions four weeks apart, then quarterly maintenance. Single-session PRP advertised in salons rarely produces results.",
+      },
+    ],
+  },
+  {
+    title: "Sunscreen for Indian Skin — A Practical Guide",
+    slug: "sunscreen-for-indian-skin",
+    metaTitle: "Sunscreen for Indian Skin — A Practical Dermatologist's Guide",
+    metaDescription:
+      "How to choose, apply, and reapply sunscreen for Indian skin — and why it is the single most effective anti-aging step you can take.",
+    excerpt:
+      "Sunscreen is the single most effective anti-aging product available. Here is how to choose and use one that actually works.",
+    publishedDate: "2026-02-28",
+    author: "Dr. Meera Iyer",
+    category: "Skin Care",
+    readingTime: "6 min read",
+    content: [
+      {
+        heading: "What to look for",
+        body: "A broad-spectrum sunscreen with SPF 30–50, PA+++ or higher, and a formulation you actually enjoy wearing. Tinted mineral sunscreens often suit Indian skin tones better — they avoid the white cast of pure mineral filters.",
+      },
+      {
+        heading: "How much to apply",
+        body: "Roughly two finger-lengths of product across the face and neck. Most people apply a quarter of what's needed and wonder why they still pigment.",
+      },
+      {
+        heading: "Reapplication",
+        body: "Every 2–3 hours of sun exposure. For office settings, once at noon is usually enough. For outdoor days, set an alarm.",
+      },
+      {
+        heading: "Sunscreen and pigmentation",
+        body: "If you are treating melasma or post-inflammatory pigmentation, sunscreen is non-negotiable. Without it, no other treatment — laser, peels, or topicals — will hold.",
       },
     ],
   },

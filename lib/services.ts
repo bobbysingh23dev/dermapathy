@@ -1,6 +1,9 @@
+export type ServiceCategory = "hair" | "skin";
+
 export type Service = {
   title: string;
   slug: string;
+  category: ServiceCategory;
   metaTitle: string;
   metaDescription: string;
   shortDescription: string;
@@ -11,318 +14,340 @@ export type Service = {
 };
 
 export const services: Service[] = [
+  // ───────── HAIR ─────────
   {
-    title: "Ayurvedic Consultation",
-    slug: "ayurvedic-consultation",
-    metaTitle: "Ayurvedic Consultation — Personalized Dosha Analysis",
+    title: "Hair Transplant (FUE & DHT)",
+    slug: "hair-transplant",
+    category: "hair",
+    metaTitle: "Hair Transplant — Advanced FUE & DHT Procedures | Dermapathy",
     metaDescription:
-      "Book a one-on-one Ayurvedic consultation with experienced practitioners for dosha analysis, personalized herbal guidance, and a long-term wellness path.",
+      "Advanced hair transplant at Dermapathy — Follicular Unit Extraction (FUE) and Direct Hair Transplant (DHT) for natural, permanent hair restoration with minimal downtime.",
     shortDescription:
-      "Personalized dosha analysis and wellness guidance from experienced Ayurvedic practitioners.",
+      "Permanent, natural-looking hair restoration through advanced FUE and DHT techniques.",
     longDescription:
-      "Our Ayurvedic consultations are rooted in classical pulse, tongue, and lifestyle assessment. Each session focuses on understanding your unique constitution, current imbalances, and goals — then translating that into a sustainable plan that fits modern life. We use natural herbs, dietary refinement, and daily rituals over quick fixes.",
+      "Our hair transplant programme combines two of the most refined techniques in modern dermatology — Follicular Unit Extraction (FUE) and Direct Hair Transplant (DHT). Each graft is harvested individually and placed by hand to follow your natural hairline, density, and growth direction. Procedures are performed under local anaesthesia in our day-care clinic, with most patients returning to office work within a week.",
     benefits: [
-      "Personalized dosha and prakriti assessment",
-      "Targeted herbal recommendations",
-      "Lifestyle and routine refinement",
-      "Long-term wellness roadmap",
+      "Natural, permanent results designed around your hairline",
+      "Minimally invasive — local anaesthesia, no stitches",
+      "Same-day discharge with a quick recovery",
+      "Long-term aftercare and growth tracking",
     ],
     process: [
       {
         step: "Consultation",
         description:
-          "An unhurried conversation about your health history, lifestyle, and concerns.",
+          "Scalp analysis, donor area assessment, and a clear plan with realistic expectations.",
       },
+      {
+        step: "Design",
+        description:
+          "Hairline design tailored to your face, age, and long-term plan — reviewed before any surgery.",
+      },
+      {
+        step: "Procedure",
+        description:
+          "FUE or DHT performed under local anaesthesia in a single session, typically 6–8 hours.",
+      },
+      {
+        step: "Aftercare",
+        description:
+          "Structured follow-up at day 1, week 1, month 3, month 6, and month 12 to track growth.",
+      },
+    ],
+    faq: [
+      {
+        question: "How long does the procedure take?",
+        answer:
+          "Most sessions are 6–8 hours under local anaesthesia. You walk in and walk out the same day.",
+      },
+      {
+        question: "When will I see results?",
+        answer:
+          "New growth typically begins at 3–4 months. Visible density improves through month 6, with final results at 12 months.",
+      },
+      {
+        question: "Is it permanent?",
+        answer:
+          "Yes — transplanted follicles are taken from genetically resistant donor zones and continue to grow for life.",
+      },
+      {
+        question: "Will it look natural?",
+        answer:
+          "Yes. Each graft is placed individually following your natural hairline, density, and angle. We deliberately design hairlines that age well.",
+      },
+    ],
+  },
+  {
+    title: "PRP Hair Therapy",
+    slug: "prp-hair-therapy",
+    category: "hair",
+    metaTitle: "PRP Hair Therapy — Platelet-Rich Plasma for Hair Loss",
+    metaDescription:
+      "Reduce hair fall and stimulate regrowth with Platelet-Rich Plasma (PRP) therapy at Dermapathy. A safe, in-clinic procedure backed by clinical evidence.",
+    shortDescription:
+      "Stimulate regrowth and slow hair fall using your own platelet-rich plasma.",
+    longDescription:
+      "PRP (Platelet-Rich Plasma) therapy uses growth factors from your own blood to stimulate dormant hair follicles, reduce shedding, and improve the calibre of existing hair. It is a non-surgical, evidence-backed protocol most effective in early-stage hair thinning and as a long-term complement to a hair transplant.",
+    benefits: [
+      "Non-surgical, in-clinic procedure (~45 minutes)",
+      "Reduces shedding within 8–12 weeks",
+      "Improves hair calibre and scalp health",
+      "Excellent companion therapy after a transplant",
+    ],
+    process: [
       {
         step: "Assessment",
         description:
-          "Pulse, tongue, and constitutional analysis using classical Ayurvedic methods.",
+          "Scalp examination, hair pull test, and bloodwork to determine if PRP is right for you.",
       },
       {
-        step: "Personalized Plan",
+        step: "Preparation",
         description:
-          "A practical plan covering diet, routine, herbal support, and daily practices.",
+          "A small blood draw is centrifuged to isolate platelet-rich plasma.",
       },
       {
-        step: "Follow-up",
+        step: "Treatment",
         description:
-          "Ongoing reviews to refine the plan as your body and routine evolve.",
+          "Targeted micro-injections into thinning zones — usually under topical anaesthesia.",
+      },
+      {
+        step: "Maintenance",
+        description:
+          "Initial protocol of 3–4 sessions, 4 weeks apart, then quarterly maintenance.",
       },
     ],
     faq: [
       {
-        question: "How long is an Ayurvedic consultation?",
+        question: "Does it hurt?",
         answer:
-          "Initial consultations typically run 60–75 minutes. Follow-ups are 30–45 minutes.",
+          "Discomfort is minimal. We use topical anaesthesia and a fine needle technique.",
       },
       {
-        question: "Do I need to bring anything?",
+        question: "How many sessions will I need?",
         answer:
-          "Recent reports if any, a list of current medications, and a brief note on your daily routine help us prepare.",
+          "Most patients see meaningful change after 3–4 monthly sessions, followed by quarterly maintenance.",
       },
       {
-        question: "Is Ayurveda safe alongside modern medicine?",
+        question: "Can it replace a transplant?",
         answer:
-          "Yes, when guided by a qualified practitioner. We coordinate around existing treatments and never recommend stopping prescribed medication abruptly.",
+          "PRP works best in early-stage thinning. Once follicles are fully miniaturised, a transplant is the more effective option.",
       },
     ],
   },
   {
-    title: "Yoga and Meditation Guidance",
-    slug: "yoga-and-meditation-guidance",
-    metaTitle: "Yoga and Meditation Guidance — Personalized Practice",
+    title: "Scalp Treatments",
+    slug: "scalp-treatments",
+    category: "hair",
+    metaTitle: "Scalp Treatments — Dandruff, Itch & Scalp Health | Dermapathy",
     metaDescription:
-      "Personalized yoga and meditation programs tailored to your body, mind, and goals — taught by experienced teachers in the classical tradition.",
+      "Medical-grade scalp treatments for dandruff, seborrheic dermatitis, itch, and scalp inflammation — restoring a healthy foundation for hair growth.",
     shortDescription:
-      "Personalized yoga and meditation programs designed around your body and goals.",
+      "Medical scalp care that targets dandruff, irritation, and the root causes of poor hair health.",
     longDescription:
-      "We design yoga and meditation programs that respect your starting point — whether you are recovering from injury, building stamina, or seeking depth in practice. Sessions blend asana, pranayama, and meditation, with attention to breath and intention rather than performance.",
+      "A healthy scalp is the foundation of healthy hair. Our scalp programme treats dandruff, seborrheic dermatitis, scalp psoriasis, and chronic itch using a combination of medicated formulations, in-clinic procedures, and lifestyle adjustments tailored to your skin type and hair concerns.",
     benefits: [
-      "Custom asana sequences for your body",
-      "Breathwork to calm the nervous system",
-      "Meditation techniques for daily life",
-      "Sustainable, injury-aware progression",
+      "Targets dandruff and seborrheic dermatitis",
+      "Calms itch and inflammation",
+      "Strengthens the foundation for hair growth",
+      "Personalised home-care plan",
     ],
     process: [
       {
-        step: "Intake",
+        step: "Examination",
         description:
-          "Understanding your physical history, goals, and current practice level.",
-      },
-      {
-        step: "Practice Design",
-        description:
-          "A sequence built around your body, available time, and intentions.",
-      },
-      {
-        step: "Guided Sessions",
-        description:
-          "One-on-one or small-group sessions with breath and posture coaching.",
-      },
-      {
-        step: "Refinement",
-        description:
-          "Periodic adjustments as your practice deepens and life shifts.",
-      },
-    ],
-    faq: [
-      {
-        question: "I am a complete beginner — is this for me?",
-        answer:
-          "Yes. Programs are designed from the ground up, starting with breath and gentle movement.",
-      },
-      {
-        question: "How often should I practice?",
-        answer:
-          "Most students see real change with three to five short sessions per week, supported by daily breathwork.",
-      },
-    ],
-  },
-  {
-    title: "Natural Wellness Programs",
-    slug: "natural-wellness-programs",
-    metaTitle: "Natural Wellness Programs — Holistic Health Plans",
-    metaDescription:
-      "Multi-week natural wellness programs that combine Ayurveda, yoga, nutrition, and lifestyle coaching for a complete holistic reset.",
-    shortDescription:
-      "Multi-week programs combining Ayurveda, yoga, nutrition, and lifestyle coaching.",
-    longDescription:
-      "Our wellness programs are structured journeys designed for people who want a complete, guided reset. Each program blends classical Ayurvedic principles with modern nutrition, yoga, and habit coaching, delivered over four to twelve weeks with regular check-ins.",
-    benefits: [
-      "Structured 4–12 week journey",
-      "Integrated diet, movement, and rest",
-      "Weekly check-ins and adjustments",
-      "Lasting lifestyle change",
-    ],
-    process: [
-      {
-        step: "Discovery",
-        description:
-          "Understanding your goals, constraints, and what success means to you.",
-      },
-      {
-        step: "Diagnosis",
-        description:
-          "A holistic assessment across diet, sleep, stress, and movement.",
-      },
-      {
-        step: "Program",
-        description:
-          "A weekly plan with daily practices, meals, and reflection prompts.",
-      },
-      {
-        step: "Follow-up Care",
-        description:
-          "Weekly reviews and adjustments, plus a closing plan for continued practice.",
-      },
-    ],
-    faq: [
-      {
-        question: "Are these programs online or in person?",
-        answer:
-          "Both. Most clients work with us online, with optional in-person sessions where available.",
-      },
-      {
-        question: "What if I miss a week?",
-        answer:
-          "The program flexes around your life. Missed sessions are rolled forward without judgment.",
-      },
-    ],
-  },
-  {
-    title: "Diet and Lifestyle Planning",
-    slug: "diet-and-lifestyle-planning",
-    metaTitle: "Diet and Lifestyle Planning — Ayurvedic Nutrition",
-    metaDescription:
-      "Personalized diet and lifestyle plans grounded in Ayurvedic nutrition and modern food science — practical, sustainable, and tailored to you.",
-    shortDescription:
-      "Personalized food and routine plans grounded in Ayurvedic nutrition and modern science.",
-    longDescription:
-      "We build food and routine plans that work in your real kitchen and real schedule. Rather than restrictive diets, our plans focus on what to add, when to eat, and how to align your day with your body's natural rhythms.",
-    benefits: [
-      "Constitutional and seasonal eating guidance",
-      "Practical recipes and meal structures",
-      "Sleep and circadian rhythm support",
-      "Sustainable habit-based change",
-    ],
-    process: [
-      {
-        step: "Profile",
-        description:
-          "A clear picture of your constitution, current diet, and lifestyle.",
+          "Trichoscopy, scalp imaging, and a clear diagnosis of the underlying condition.",
       },
       {
         step: "Plan",
         description:
-          "A weekly meal and routine framework — flexible, not rigid.",
+          "Combination of medicated shampoos, topicals, and in-clinic sessions.",
       },
       {
-        step: "Recipes",
+        step: "Treatment",
         description:
-          "Simple recipes and shopping guides that fit your kitchen.",
-      },
-      {
-        step: "Refinement",
-        description:
-          "Iterative adjustments based on how your body responds.",
-      },
-    ],
-    faq: [
-      {
-        question: "Will I have to give up the foods I love?",
-        answer:
-          "Rarely. We focus on balance and timing, not elimination, unless a specific food is clearly causing harm.",
-      },
-      {
-        question: "Do you support vegetarian and non-vegetarian diets?",
-        answer:
-          "Yes. Plans are built around what you actually eat, with thoughtful adjustments either way.",
-      },
-    ],
-  },
-  {
-    title: "Stress Management",
-    slug: "stress-management",
-    metaTitle: "Stress Management — Mind-Body Wellness Programs",
-    metaDescription:
-      "Calm the nervous system and build long-term resilience through Ayurveda, breathwork, meditation, and lifestyle practices.",
-    shortDescription:
-      "Calm the nervous system and build resilience with breathwork, meditation, and lifestyle care.",
-    longDescription:
-      "Our stress care combines breathwork, meditation, herbal support, and small daily practices that compound into a calmer baseline. The aim is not just relief, but a more resilient nervous system over time.",
-    benefits: [
-      "Daily breathwork and meditation routines",
-      "Targeted herbal and dietary support",
-      "Sleep restoration practices",
-      "Tools for high-pressure days",
-    ],
-    process: [
-      {
-        step: "Listening",
-        description:
-          "Understanding the texture of your stress and what triggers it.",
-      },
-      {
-        step: "Diagnosis",
-        description:
-          "Mapping how stress is showing up in body, sleep, and energy.",
-      },
-      {
-        step: "Practice",
-        description:
-          "A short daily practice, plus tools for acute moments.",
-      },
-      {
-        step: "Follow-up",
-        description:
-          "Weekly check-ins to keep practice realistic and effective.",
-      },
-    ],
-    faq: [
-      {
-        question: "How quickly will I feel a difference?",
-        answer:
-          "Many people feel calmer within the first week. Lasting nervous system change typically takes six to twelve weeks of consistent practice.",
-      },
-      {
-        question: "Can I combine this with therapy?",
-        answer:
-          "Absolutely. Our practices complement, not replace, mental health care.",
-      },
-    ],
-  },
-  {
-    title: "Preventive Health Guidance",
-    slug: "preventive-health-guidance",
-    metaTitle: "Preventive Health Guidance — Proactive Wellness Care",
-    metaDescription:
-      "Proactive Ayurvedic guidance to support immunity, energy, and long-term wellbeing — designed for people who want to stay well, not just get well.",
-    shortDescription:
-      "Proactive guidance for immunity, energy, and long-term wellbeing.",
-    longDescription:
-      "Preventive care is at the heart of Ayurveda. This program is for people who feel mostly well but want to stay that way — through seasonal routines, periodic detox, and habits that protect immunity and energy.",
-    benefits: [
-      "Seasonal routine planning",
-      "Immunity and digestion support",
-      "Energy and sleep optimization",
-      "Periodic gentle detox protocols",
-    ],
-    process: [
-      {
-        step: "Baseline",
-        description:
-          "Establishing where you are and what wellbeing looks like for you.",
-      },
-      {
-        step: "Plan",
-        description:
-          "A seasonal calendar of practices, foods, and gentle resets.",
-      },
-      {
-        step: "Practice",
-        description:
-          "Light, sustainable daily and weekly habits.",
+          "Medicated peels, mesotherapy, or LED therapy depending on the indication.",
       },
       {
         step: "Review",
         description:
-          "Quarterly reviews to adjust with the seasons and your life.",
+          "Follow-up at 4 and 12 weeks to refine the protocol as the scalp settles.",
       },
     ],
     faq: [
       {
-        question: "Do I need to be sick to start?",
+        question: "How long until my scalp feels better?",
         answer:
-          "No — this program is specifically for people who want to maintain wellness, not recover from illness.",
+          "Most patients feel relief from itch and flaking within two weeks. Deeper inflammation takes 6–12 weeks to fully resolve.",
       },
       {
-        question: "How often do we meet?",
+        question: "Will I need treatment forever?",
         answer:
-          "Typically once a quarter, with optional check-ins between seasons.",
+          "Many scalp conditions are chronic but very manageable. After the active phase, most patients move to a light maintenance routine.",
+      },
+    ],
+  },
+
+  // ───────── SKIN ─────────
+  {
+    title: "Skin Rejuvenation & Anti-Aging",
+    slug: "skin-rejuvenation",
+    category: "skin",
+    metaTitle: "Skin Rejuvenation & Anti-Aging Treatments | Dermapathy",
+    metaDescription:
+      "Restore tone, texture, and youthful firmness with medical-grade skin rejuvenation — combining peels, microneedling, and customised topicals.",
+    shortDescription:
+      "Medical-grade rejuvenation for fine lines, dullness, and loss of firmness.",
+    longDescription:
+      "Our skin rejuvenation programme is designed to restore tone, texture, and firmness using a combination of medical-grade peels, microneedling, and customised prescription topicals. Each plan is built around your skin type, age, and concerns — and emphasises long-term skin health rather than quick fixes.",
+    benefits: [
+      "Smoother texture and brighter tone",
+      "Visible reduction in fine lines",
+      "Improved firmness and elasticity",
+      "Customised prescription home routine",
+    ],
+    process: [
+      {
+        step: "Skin Analysis",
+        description:
+          "Digital skin analysis covering pigmentation, hydration, sebum, and elasticity.",
+      },
+      {
+        step: "Plan",
+        description:
+          "A personalised in-clinic and at-home protocol with clear timelines.",
+      },
+      {
+        step: "Treatment",
+        description:
+          "Series of in-clinic sessions — peel, microneedling, or LED — every 3–4 weeks.",
+      },
+      {
+        step: "Maintenance",
+        description:
+          "Quarterly review to keep results compounding over time.",
+      },
+    ],
+    faq: [
+      {
+        question: "When will I see a difference?",
+        answer:
+          "Brightness and texture improve within the first session. Fine lines and firmness need 6–12 weeks of consistent treatment.",
+      },
+      {
+        question: "Is there downtime?",
+        answer:
+          "Most treatments have 24–48 hours of mild redness. We schedule around your social calendar.",
+      },
+    ],
+  },
+  {
+    title: "Acne & Pigmentation",
+    slug: "acne-pigmentation",
+    category: "skin",
+    metaTitle: "Acne & Pigmentation Treatment — Clear Skin Programme",
+    metaDescription:
+      "Evidence-based acne and pigmentation treatment combining medical topicals, peels, and laser to clear active acne, fade marks, and prevent recurrence.",
+    shortDescription:
+      "Clear active acne, fade marks, and prevent recurrence with a medical-grade protocol.",
+    longDescription:
+      "Acne and post-acne pigmentation are deeply personal — and rarely solved by a single product. Our protocol combines medical topicals, in-clinic peels, and laser treatments where indicated, addressing active breakouts, post-inflammatory pigmentation, and underlying triggers in parallel.",
+    benefits: [
+      "Reduces active breakouts within 4–6 weeks",
+      "Fades post-acne marks and pigmentation",
+      "Treats triggers — hormonal, dietary, lifestyle",
+      "Long-term skin clarity, not short-term suppression",
+    ],
+    process: [
+      {
+        step: "Diagnosis",
+        description:
+          "Acne grading, pigmentation mapping, and review of triggers and history.",
+      },
+      {
+        step: "Plan",
+        description:
+          "Prescription topicals plus a treatment cadence appropriate to your skin grade.",
+      },
+      {
+        step: "Treatment",
+        description:
+          "Targeted peels, lasers, or extractions depending on the active concern.",
+      },
+      {
+        step: "Maintenance",
+        description:
+          "Step-down protocol to keep skin clear without over-treating.",
+      },
+    ],
+    faq: [
+      {
+        question: "Will it come back?",
+        answer:
+          "We treat for clearance and then gradually step down to a maintenance routine. The risk of recurrence is much lower with this approach.",
+      },
+      {
+        question: "Are lasers safe for my skin tone?",
+        answer:
+          "Yes — we use technology calibrated for South Asian skin and conservative settings to minimise the risk of post-inflammatory pigmentation.",
+      },
+    ],
+  },
+  {
+    title: "Laser Treatments",
+    slug: "laser-treatments",
+    category: "skin",
+    metaTitle: "Laser Treatments — Hair Removal, Resurfacing & More",
+    metaDescription:
+      "Advanced laser treatments at Dermapathy — laser hair removal, fractional resurfacing, pigmentation lasers, and vascular lasers for safe, effective results.",
+    shortDescription:
+      "Advanced laser solutions for hair removal, resurfacing, pigmentation, and vascular concerns.",
+    longDescription:
+      "Our laser suite includes diode and Nd:YAG hair removal platforms, fractional resurfacing for texture, Q-switched lasers for pigmentation, and vascular lasers for redness. Each treatment is mapped to your skin type and concern — and supervised by a board-certified dermatologist throughout.",
+    benefits: [
+      "Safe for South Asian skin tones",
+      "FDA-cleared platforms",
+      "Customised energy settings per session",
+      "Dermatologist-supervised throughout",
+    ],
+    process: [
+      {
+        step: "Consultation",
+        description:
+          "Skin typing, concern mapping, and a patch test where appropriate.",
+      },
+      {
+        step: "Plan",
+        description:
+          "A clear schedule of sessions with realistic outcomes and downtime.",
+      },
+      {
+        step: "Treatment",
+        description:
+          "In-clinic sessions, typically 30–45 minutes, in a comfortable setting.",
+      },
+      {
+        step: "Aftercare",
+        description:
+          "Structured aftercare and SPF guidance to protect results.",
+      },
+    ],
+    faq: [
+      {
+        question: "How many laser hair removal sessions do I need?",
+        answer:
+          "Most patients need 6–8 sessions, 4–6 weeks apart, followed by an annual touch-up.",
+      },
+      {
+        question: "Is there downtime after fractional resurfacing?",
+        answer:
+          "Expect 3–5 days of mild redness and flaking. We plan around social and travel calendars.",
       },
     ],
   },
 ];
+
+export const hairServices = services.filter((s) => s.category === "hair");
+export const skinServices = services.filter((s) => s.category === "skin");
 
 export function getServiceBySlug(slug: string): Service | undefined {
   return services.find((s) => s.slug === slug);

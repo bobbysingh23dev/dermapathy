@@ -4,6 +4,8 @@
   --color-ivory: #fbf8f2;
   --color-cream: #f4ede0;
   --color-beige: #ece2cf;
+  --color-sand: #d8b89a;
+  --color-mist: #ece8e0;
   --color-charcoal: #1f1d1a;
   --color-charcoal-soft: #3d3a35;
   --color-muted: #6b675f;
@@ -17,6 +19,8 @@
   --color-ivory: var(--color-ivory);
   --color-cream: var(--color-cream);
   --color-beige: var(--color-beige);
+  --color-sand: var(--color-sand);
+  --color-mist: var(--color-mist);
   --color-charcoal: var(--color-charcoal);
   --color-charcoal-soft: var(--color-charcoal-soft);
   --color-muted: var(--color-muted);
@@ -40,6 +44,29 @@ body {
   color: var(--color-charcoal);
   font-family: var(--font-body, "Inter"), system-ui, sans-serif;
   font-feature-settings: "ss01", "cv11";
+  position: relative;
+}
+
+/* Subtle paper-grain texture — adds warmth without weight (~1KB inline SVG) */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.5;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.62  0 0 0 0 0.55  0 0 0 0 0.42  0 0 0 0.05 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  background-size: 240px 240px;
+}
+
+/* Make sure interactive UI sits above the texture */
+header,
+main,
+footer,
+section {
+  position: relative;
+  z-index: 1;
 }
 
 ::selection {
@@ -61,6 +88,58 @@ body {
   font-weight: 500;
 }
 
+/* Gold accent rule — small horizontal line used under section headings */
+.gold-rule {
+  display: block;
+  width: 2.5rem;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    var(--color-gold-soft),
+    var(--color-gold)
+  );
+  margin-top: 0.75rem;
+}
+
+.gold-rule-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Soft scroll-reveal — pure CSS, no JS, no library */
+.reveal {
+  opacity: 0;
+  transform: translateY(12px);
+  animation: rise 0.9s cubic-bezier(0.2, 0.6, 0.2, 1) both;
+  animation-delay: 60ms;
+}
+
+@keyframes rise {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Decorative serif italic flourish */
+.flourish {
+  font-style: italic;
+  color: var(--color-earth);
+}
+
+/* Editorial outline-text — used for the split-headline hero */
+.text-outline {
+  -webkit-text-stroke: 1.5px var(--color-charcoal);
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+@media (min-width: 1024px) {
+  .text-outline {
+    -webkit-text-stroke-width: 2px;
+  }
+}
+
 .btn-primary {
   display: inline-flex;
   align-items: center;
@@ -74,6 +153,7 @@ body {
   border: 1px solid var(--color-charcoal);
   transition: background 200ms ease, color 200ms ease;
 }
+
 
 .btn-primary:hover {
   background: var(--color-earth);

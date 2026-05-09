@@ -6,16 +6,16 @@ import { blogs } from "@/lib/blogs";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Journal — Insights from our practice",
+  title: "Journal — Dermatology Insights",
   description:
-    "Practical, considered writing on Ayurveda, yoga, mindful nutrition, and the quiet art of holistic wellbeing — from the practitioners at DharmaPathy.",
+    "Honest, dermatologist-written articles on hair transplant techniques, skin care, pigmentation, lasers, and the evidence behind what actually works.",
   path: "/blog",
 });
 
 export default function BlogPage() {
   return (
     <>
-      <section className="border-b border-[var(--color-border)] bg-[var(--color-ivory)]">
+      <section className="border-b border-border bg-ivory">
         <div className="mx-auto w-full max-w-7xl px-6 pt-12 sm:px-8 lg:px-12">
           <Breadcrumbs
             items={[
@@ -27,24 +27,22 @@ export default function BlogPage() {
         <div className="mx-auto grid w-full max-w-7xl gap-12 px-6 py-16 sm:px-8 lg:grid-cols-12 lg:px-12 lg:py-24">
           <div className="lg:col-span-7">
             <p className="eyebrow">Journal</p>
-            <h1 className="mt-6 font-serif text-[2.5rem] leading-[1.05] tracking-tight text-[var(--color-charcoal)] sm:text-[3.5rem]">
-              Insights from our
-              <span className="block italic text-[var(--color-earth)]">
-                practice and lineage.
-              </span>
+            <h1 className="mt-6 font-serif text-[2.5rem] leading-[1.05] tracking-tight text-charcoal sm:text-[3.5rem]">
+              Dermatology, written
+              <span className="block flourish">by dermatologists.</span>
             </h1>
           </div>
           <div className="lg:col-span-5">
-            <p className="text-base leading-8 text-[var(--color-muted)] sm:text-lg">
-              Short, practical writing on Ayurveda, yoga, food, and the quiet
-              art of wellbeing — written by the same practitioners you would
-              meet in a consultation.
+            <p className="text-base leading-8 text-muted sm:text-lg">
+              Practical, evidence-based writing on hair restoration, acne,
+              pigmentation, and skin care — from the same dermatologists you
+              meet in our consulting rooms.
             </p>
           </div>
         </div>
       </section>
 
-      <section className="border-b border-[var(--color-border)] bg-[var(--color-cream)]">
+      <section className="border-b border-border bg-cream">
         <div className="mx-auto w-full max-w-7xl px-6 py-20 sm:px-8 lg:px-12 lg:py-24">
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {blogs.map((post) => (
@@ -55,9 +53,9 @@ export default function BlogPage() {
       </section>
 
       <CTASection
-        eyebrow="From Reading to Practice"
-        title="Ready to bring this into your life?"
-        description="The articles are a starting point. The real change happens in practice — and we'd love to help you take that first step."
+        eyebrow="From Reading to Care"
+        title="Ready to translate this into a real plan?"
+        description="The articles are a starting point. The real progress happens in a consultation — and we'd love to help you take that first step."
       />
     </>
   );

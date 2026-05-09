@@ -1,91 +1,113 @@
 import Link from "next/link";
+import Image from "next/image";
+import { images } from "@/public/images";
+
+const trust = [
+  "Board-Certified Dermatologists",
+  "Advanced Technology",
+  "Personalised Treatments",
+  "10+ Years Experience",
+];
 
 export default function HeroSection() {
   return (
     <section
       aria-labelledby="hero-title"
-      className="relative overflow-hidden border-b border-[var(--color-border)] bg-[var(--color-ivory)]"
+      className="relative overflow-hidden border-b border-border"
     >
-      <div className="mx-auto grid w-full max-w-7xl gap-14 px-6 py-20 sm:px-8 sm:py-28 lg:grid-cols-12 lg:gap-12 lg:px-12 lg:py-32">
-        <div className="lg:col-span-7 lg:pr-6">
-          <p className="eyebrow">Holistic Wellness Since 2018</p>
-          <h1
-            id="hero-title"
-            className="mt-6 font-serif text-[2.5rem] leading-[1.05] tracking-tight text-[var(--color-charcoal)] sm:text-[3.5rem] lg:text-[4rem]"
-          >
-            Holistic wellness rooted in
-            <span className="block italic text-[var(--color-earth)]">
-              ancient wisdom and modern care.
-            </span>
-          </h1>
-          <p className="mt-7 max-w-xl text-base leading-8 text-[var(--color-muted)] sm:text-lg">
-            DharmaPathy combines classical Ayurveda, yoga, and mindful nutrition
-            into personalized programs designed for long-term wellbeing — not
-            quick fixes.
-          </p>
-          <div className="mt-10 flex flex-wrap gap-3">
-            <Link href="/contact" className="btn-primary">
-              Book a Consultation
-            </Link>
-            <Link href="/services" className="btn-secondary">
-              Explore Services
-            </Link>
-          </div>
+      {/* Background split — sand on the left, mist on the right */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 grid grid-cols-2"
+      >
+        <div className="bg-sand" />
+        <div className="bg-mist" />
+      </div>
 
-          <dl className="mt-14 grid grid-cols-3 gap-6 border-t border-[var(--color-border)] pt-8">
-            <div>
-              <dt className="eyebrow">Practitioners</dt>
-              <dd className="mt-2 font-serif text-3xl text-[var(--color-charcoal)]">
-                12+
-              </dd>
-            </div>
-            <div>
-              <dt className="eyebrow">Programs</dt>
-              <dd className="mt-2 font-serif text-3xl text-[var(--color-charcoal)]">
-                25+
-              </dd>
-            </div>
-            <div>
-              <dt className="eyebrow">Lives Touched</dt>
-              <dd className="mt-2 font-serif text-3xl text-[var(--color-charcoal)]">
-                10k+
-              </dd>
-            </div>
-          </dl>
+      {/* Two full-bleed portraits */}
+      <div className="relative grid h-[78vh] min-h-[560px] grid-cols-2 sm:min-h-[640px] lg:h-[82vh] lg:min-h-[700px]">
+        <div className="relative h-full overflow-hidden">
+          <Image
+            src={images.Women}
+            alt="Skin care patient portrait"
+            fill
+            priority
+            sizes="50vw"
+            className="object-cover object-[35%_top] mix-blend-multiply"
+          />
         </div>
-
-        <div className="lg:col-span-5">
-          <div className="relative h-full">
-            <div
-              aria-hidden
-              className="absolute inset-0 -translate-x-3 translate-y-3 rounded-sm border border-[var(--color-border)]"
-            />
-            <div className="relative flex h-full min-h-[420px] flex-col justify-between rounded-sm border border-[var(--color-border)] bg-[var(--color-cream)] p-8 sm:p-10">
-              <div>
-                <p className="eyebrow">From the Practice</p>
-                <p className="mt-6 font-serif text-2xl leading-snug text-[var(--color-charcoal)] sm:text-[1.75rem]">
-                  &ldquo;Ayurveda is not a treatment we apply. It is a way of
-                  paying attention.&rdquo;
-                </p>
-              </div>
-              <div className="mt-10 grid grid-cols-2 gap-6 border-t border-[var(--color-border)] pt-6">
-                <div>
-                  <p className="eyebrow">Approach</p>
-                  <p className="mt-2 text-sm text-[var(--color-charcoal-soft)]">
-                    Personalized, sustainable, and rooted in classical wisdom.
-                  </p>
-                </div>
-                <div>
-                  <p className="eyebrow">Outcome</p>
-                  <p className="mt-2 text-sm text-[var(--color-charcoal-soft)]">
-                    Steady energy, calmer days, and long-term resilience.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div className="relative h-full overflow-hidden">
+          <Image
+            src={images.Men}
+            alt="Hair restoration patient portrait"
+            fill
+            priority
+            sizes="50vw"
+            className="object-cover object-[65%_top]"
+          />
         </div>
       </div>
+
+      {/* Soft cream vignette behind the headline so type stays legible */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(ellipse 55% 38% at 50% 48%, rgba(244,237,224,0.65), rgba(244,237,224,0) 75%)",
+        }}
+      />
+
+      {/* Centred headline overlay */}
+      <div className="pointer-events-none absolute inset-0 z-10 flex flex-col items-center justify-center px-6 text-center">
+        <p className="eyebrow text-charcoal-soft">
+          Dermatology · Hair · Skin
+        </p>
+
+        <h1
+          id="hero-title"
+          className="mt-5 font-serif text-[3rem] leading-[0.95] tracking-tight sm:text-[5.25rem] lg:text-[7rem]"
+        >
+          <span className="text-outline">SKIN</span>
+          <span className="mx-3 italic font-light text-earth sm:mx-5">
+            &amp;
+          </span>
+          <span className="text-charcoal">SCALP</span>
+        </h1>
+
+        <p className="mt-3 font-serif text-2xl italic tracking-[0.18em] text-charcoal-soft sm:text-3xl lg:text-4xl">
+          Restoration
+        </p>
+
+        <p className="mx-auto mt-7 max-w-md text-sm leading-7 text-charcoal-soft sm:text-base">
+          Personalised dermatology care for hair and skin concerns —
+          board-certified specialists, advanced technique.
+        </p>
+
+        <div className="pointer-events-auto mt-9">
+          <Link href="/contact" className="btn-primary">
+            Book Appointment
+          </Link>
+        </div>
+      </div>
+
+      {/* Trust strip pinned to the bottom of the hero */}
+      <ul
+        aria-label="Clinic credentials"
+        className="relative z-10 grid gap-px border-t border-border bg-border sm:grid-cols-2 lg:grid-cols-4"
+      >
+        {trust.map((label) => (
+          <li
+            key={label}
+            className="flex items-center justify-center gap-2 bg-ivory px-4 py-4 text-center text-[0.72rem] uppercase tracking-[0.2em] text-charcoal-soft sm:py-5"
+          >
+            <span aria-hidden className="text-earth">
+              ◆
+            </span>
+            {label}
+          </li>
+        ))}
+      </ul>
     </section>
   );
 }

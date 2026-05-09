@@ -17,7 +17,7 @@ export default function Breadcrumbs({ items }: Props) {
       />
       <nav
         aria-label="Breadcrumb"
-        className="text-xs uppercase tracking-[0.18em] text-[var(--color-muted)]"
+        className="text-xs uppercase tracking-[0.18em] text-muted"
       >
         <ol className="flex flex-wrap items-center gap-2">
           {items.map((item, i) => {
@@ -25,13 +25,13 @@ export default function Breadcrumbs({ items }: Props) {
             return (
               <li key={item.href} className="flex items-center gap-2">
                 {isLast ? (
-                  <span aria-current="page" className="text-[var(--color-charcoal)]">
+                  <span aria-current="page" className="text-charcoal">
                     {item.name}
                   </span>
                 ) : (
                   <Link
                     href={item.href}
-                    className="hover:text-[var(--color-earth)]"
+                    className="hover:text-earth"
                   >
                     {item.name}
                   </Link>

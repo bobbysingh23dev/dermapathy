@@ -9,22 +9,22 @@ type Props = {
 export default function ServiceCard({ service, variant = "default" }: Props) {
   return (
     <article
-      className={`group flex h-full flex-col justify-between border border-[var(--color-border)] bg-[var(--color-ivory)] p-8 transition-colors hover:border-[var(--color-charcoal)] sm:p-10 ${
-        variant === "feature" ? "bg-[var(--color-cream)]" : ""
+      className={`group flex h-full flex-col justify-between border border-border bg-ivory p-8 transition-colors hover:border-charcoal sm:p-10 ${
+        variant === "feature" ? "bg-cream" : ""
       }`}
     >
       <div>
         <p className="eyebrow">Service</p>
-        <h3 className="mt-4 font-serif text-2xl leading-snug text-[var(--color-charcoal)] sm:text-[1.6rem]">
+        <h3 className="mt-4 font-serif text-2xl leading-snug text-charcoal sm:text-[1.6rem]">
           {service.title}
         </h3>
-        <p className="mt-4 text-sm leading-7 text-[var(--color-muted)]">
+        <p className="mt-4 text-sm leading-7 text-muted">
           {service.shortDescription}
         </p>
       </div>
       <Link
         href={`/services/${service.slug}`}
-        className="mt-8 inline-flex items-center gap-2 text-xs uppercase tracking-[0.18em] text-[var(--color-charcoal)] transition-colors hover:text-[var(--color-earth)]"
+        className="mt-8 inline-flex items-center gap-2 text-xs uppercase tracking-[0.18em] text-charcoal transition-colors hover:text-earth"
         aria-label={`Learn more about ${service.title}`}
       >
         Learn more

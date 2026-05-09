@@ -21,7 +21,7 @@ export default function FAQSection({
   return (
     <section
       aria-labelledby="faq-title"
-      className="border-b border-[var(--color-border)] bg-[var(--color-ivory)]"
+      className="border-b border-border bg-ivory"
     >
       {includeJsonLd && (
         <script
@@ -38,24 +38,24 @@ export default function FAQSection({
             align="left"
           />
         </div>
-        <div className="divide-y divide-[var(--color-border)] border-y border-[var(--color-border)] lg:col-span-7">
+        <div className="divide-y divide-border border-y border-border lg:col-span-7">
           {items.map((item, i) => (
             <details
               key={i}
               className="group py-6 [&_summary::-webkit-details-marker]:hidden"
             >
               <summary className="flex cursor-pointer list-none items-start justify-between gap-6">
-                <h3 className="font-serif text-lg leading-snug text-[var(--color-charcoal)] sm:text-xl">
+                <h3 className="font-serif text-lg leading-snug text-charcoal sm:text-xl">
                   {item.question}
                 </h3>
                 <span
                   aria-hidden
-                  className="mt-1 text-[var(--color-earth)] transition-transform group-open:rotate-45"
+                  className="mt-1 text-earth transition-transform group-open:rotate-45"
                 >
                   +
                 </span>
               </summary>
-              <p className="mt-4 max-w-2xl text-sm leading-7 text-[var(--color-muted)]">
+              <p className="mt-4 max-w-2xl text-sm leading-7 text-muted">
                 {item.answer}
               </p>
             </details>

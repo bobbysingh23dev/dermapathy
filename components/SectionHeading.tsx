@@ -18,12 +18,16 @@ export default function SectionHeading({
     align === "center" ? "text-center mx-auto" : "text-left mx-0";
   return (
     <div className={`max-w-2xl ${alignment}`}>
-      {eyebrow && <p className="eyebrow mb-4">{eyebrow}</p>}
-      <Heading className="font-serif text-[2rem] leading-[1.15] tracking-tight text-[var(--color-charcoal)] sm:text-[2.5rem]">
+      {eyebrow && <p className="eyebrow">{eyebrow}</p>}
+      <span
+        aria-hidden
+        className={`gold-rule ${align === "center" ? "gold-rule-center" : ""}`}
+      />
+      <Heading className="mt-5 font-serif text-[2rem] leading-[1.15] tracking-tight text-charcoal sm:text-[2.5rem]">
         {title}
       </Heading>
       {description && (
-        <p className="mt-5 text-base leading-8 text-[var(--color-muted)]">
+        <p className="mt-5 text-base leading-8 text-muted">
           {description}
         </p>
       )}

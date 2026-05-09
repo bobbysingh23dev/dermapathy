@@ -13,12 +13,12 @@ export default function Header() {
     href === "/" ? pathname === "/" : pathname.startsWith(href);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-[var(--color-border)] bg-[var(--color-ivory)]/85 backdrop-blur supports-[backdrop-filter]:bg-[var(--color-ivory)]/70">
+    <header className="sticky top-0 z-50 border-b border-border bg-ivory/85 backdrop-blur supports-[backdrop-filter]:bg-ivory/70">
       <div className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-6 sm:px-8 lg:px-12">
         <Link
           href="/"
           aria-label={`${siteConfig.name} home`}
-          className="font-serif text-2xl tracking-[0.18em] text-[var(--color-charcoal)] sm:text-[1.6rem]"
+          className="font-serif text-2xl tracking-[0.18em] text-charcoal sm:text-[1.6rem]"
         >
           {siteConfig.name.toUpperCase()}
         </Link>
@@ -33,8 +33,8 @@ export default function Header() {
               href={item.href}
               className={`text-[0.8rem] uppercase tracking-[0.18em] transition-colors ${
                 isActive(item.href)
-                  ? "text-[var(--color-charcoal)]"
-                  : "text-[var(--color-muted)] hover:text-[var(--color-charcoal)]"
+                  ? "text-charcoal"
+                  : "text-muted hover:text-charcoal"
               }`}
             >
               {item.label}
@@ -57,12 +57,12 @@ export default function Header() {
         >
           <span className="relative block h-3 w-5">
             <span
-              className={`absolute left-0 right-0 top-0 h-px bg-[var(--color-charcoal)] transition-transform ${
+              className={`absolute left-0 right-0 top-0 h-px bg-charcoal transition-transform ${
                 open ? "translate-y-[6px] rotate-45" : ""
               }`}
             />
             <span
-              className={`absolute bottom-0 left-0 right-0 h-px bg-[var(--color-charcoal)] transition-transform ${
+              className={`absolute bottom-0 left-0 right-0 h-px bg-charcoal transition-transform ${
                 open ? "-translate-y-[6px] -rotate-45" : ""
               }`}
             />
@@ -71,7 +71,7 @@ export default function Header() {
       </div>
 
       {open && (
-        <div className="border-t border-[var(--color-border)] bg-[var(--color-ivory)] md:hidden">
+        <div className="border-t border-border bg-ivory md:hidden">
           <nav
             aria-label="Mobile"
             className="mx-auto flex w-full max-w-7xl flex-col gap-1 px-6 py-6"
@@ -83,8 +83,8 @@ export default function Header() {
                 onClick={() => setOpen(false)}
                 className={`py-3 text-sm uppercase tracking-[0.16em] ${
                   isActive(item.href)
-                    ? "text-[var(--color-charcoal)]"
-                    : "text-[var(--color-muted)]"
+                    ? "text-charcoal"
+                    : "text-muted"
                 }`}
               >
                 {item.label}
