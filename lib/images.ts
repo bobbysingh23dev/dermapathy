@@ -80,51 +80,83 @@ export const practitioners: {
   },
 ];
 
-// ───────── BEFORE / AFTER (placeholder concept photos) ─────────
-export type BeforeAfterPair = {
+// ───────── BEFORE / AFTER ─────────
+export type BeforeAfterTwoUp = {
+  kind: "two-up";
   label: string;
   description: string;
   before: SiteImage;
   after: SiteImage;
 };
 
+export type BeforeAfterSingleFrame = {
+  kind: "single-frame";
+  label: string;
+  description: string;
+  /** One photograph that already contains before & after (e.g. side‑by‑side or stacked). */
+  image: SiteImage;
+};
+
+export type BeforeAfterPair = BeforeAfterTwoUp | BeforeAfterSingleFrame;
+
 export const hairBeforeAfter: BeforeAfterPair[] = [
   {
-    label: "FUE Hair Transplant — Crown Restoration",
-    description: "Single session, 2,800 grafts. Result shown at 12 months.",
+    kind: "two-up",
+    label: "Hair restoration — pre‑op and follow‑up",
+    description:
+      "Separate clinical photographs: baseline and result after the growth phase.",
     before: {
-      src: u("photo-1583312605516-4d12bce3e3a4", 800),
-      alt: "Hair restoration — before",
-      width: 800,
-      height: 800,
+      src: "/images/9.jpeg",
+      alt: "Scalp and hair — baseline before hair restoration procedure",
+      width: 3024,
+      height: 4032,
     },
     after: {
-      src: u("photo-1605497788044-5a32c7078486", 800),
-      alt: "Hair restoration — after",
-      width: 800,
+      src: "/images/9-after.jpeg",
+      alt: "Same region after treatment — increased coverage",
+      width: 3024,
+      height: 4032,
+    },
+  },
+  {
+    kind: "single-frame",
+    label: "Side‑by‑side comparison (single image)",
+    description:
+      "Before and after captured in one frame for direct comparison.",
+    image: {
+      src: "/images/6.jpeg",
+      alt: "Hair restoration patient: before and after views shown side by side in one photograph",
+      width: 1600,
       height: 800,
     },
   },
   {
-    label: "DHT — Hairline Reconstruction",
-    description: "Hairline redesign with 2,200 grafts. Result at 9 months.",
-    before: {
-      src: u("photo-1500648767791-00dcc994a43e", 800),
-      alt: "Hairline reconstruction — before",
-      width: 800,
-      height: 800,
+    kind: "single-frame",
+    label: "Combined before / after view",
+    description: "Single composite clinical photograph.",
+    image: {
+      src: "/images/3.jpeg",
+      alt: "Hair restoration: before and after comparison in one vertical composite clinical image",
+      width: 853,
+      height: 1280,
     },
-    after: {
-      src: u("photo-1507003211169-0a1dd7228f2d", 800),
-      alt: "Hairline reconstruction — after",
-      width: 800,
-      height: 800,
+  },
+  {
+    kind: "single-frame",
+    label: "Outcome documentation (single frame)",
+    description: "Before and after presented together in one image.",
+    image: {
+      src: "/images/7.jpeg",
+      alt: "Hair restoration outcome: before and after regions shown together in one square-format clinical photograph",
+      width: 1600,
+      height: 1600,
     },
   },
 ];
 
 export const skinBeforeAfter: BeforeAfterPair[] = [
   {
+    kind: "two-up",
     label: "Acne & Pigmentation Programme",
     description:
       "12-week protocol combining medical topicals and chemical peels.",
@@ -142,6 +174,7 @@ export const skinBeforeAfter: BeforeAfterPair[] = [
     },
   },
   {
+    kind: "two-up",
     label: "Skin Rejuvenation",
     description:
       "Microneedling + medical-grade topicals over six in-clinic sessions.",

@@ -141,9 +141,9 @@ export default function HomePage() {
                 Medical-grade skin, beautifully cared for.
               </h2>
               <p className="mt-5 text-base leading-8 text-muted">
-                From acne and pigmentation to anti-aging and lasers — every
-                skin protocol is medically supervised and built around your
-                skin type.
+                From acne and pigmentation to anti-aging and lasers — every skin
+                protocol is medically supervised and built around your skin
+                type.
               </p>
             </div>
             <Link
@@ -239,8 +239,8 @@ export default function HomePage() {
             <p className="mt-7 text-base leading-8 text-muted sm:text-lg">
               Dermapathy was founded by a small team of dermatologists with one
               shared belief: that hair and skin care should be honest,
-              evidence-based, and patient-led. We invest deeply in technique
-              and technology, and we take time with every consultation.
+              evidence-based, and patient-led. We invest deeply in technique and
+              technology, and we take time with every consultation.
             </p>
             <p className="mt-5 text-base leading-8 text-muted">
               We treat thousands of patients each year, but the way we work has

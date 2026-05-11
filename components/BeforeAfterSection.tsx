@@ -53,38 +53,48 @@ export default function BeforeAfterSection({
 
         <div className="mt-14 grid gap-10 lg:grid-cols-2">
           {pairs.map((pair) => (
-            <article
-              key={pair.label}
-              className="border border-border bg-ivory"
-            >
-              <div className="grid grid-cols-2">
-                <div className="relative aspect-square overflow-hidden border-r border-border">
-                  <Image
-                    src={pair.before.src}
-                    alt={pair.before.alt}
-                    width={pair.before.width}
-                    height={pair.before.height}
-                    sizes="(max-width: 1024px) 50vw, 25vw"
-                    className="h-full w-full object-cover"
-                  />
-                  <span className="absolute left-3 top-3 bg-charcoal/85 px-3 py-1 text-[0.65rem] uppercase tracking-[0.2em] text-ivory">
-                    Before
-                  </span>
+            <article key={pair.label} className="border border-border bg-ivory">
+              {pair.kind === "two-up" ? (
+                <div className="grid grid-cols-2">
+                  <div className="relative aspect-square overflow-hidden border-r border-border">
+                    <Image
+                      src={pair.before.src}
+                      alt={pair.before.alt}
+                      width={pair.before.width}
+                      height={pair.before.height}
+                      sizes="(max-width: 1024px) 50vw, 25vw"
+                      className="h-full w-full object-cover"
+                    />
+                    <span className="absolute left-3 top-3 bg-charcoal/85 px-3 py-1 text-[0.65rem] uppercase tracking-[0.2em] text-ivory">
+                      Before
+                    </span>
+                  </div>
+                  <div className="relative aspect-square overflow-hidden">
+                    <Image
+                      src={pair.after.src}
+                      alt={pair.after.alt}
+                      width={pair.after.width}
+                      height={pair.after.height}
+                      sizes="(max-width: 1024px) 50vw, 25vw"
+                      className="h-full w-full object-cover"
+                    />
+                    <span className="absolute left-3 top-3 bg-earth/90 px-3 py-1 text-[0.65rem] uppercase tracking-[0.2em] text-ivory">
+                      After
+                    </span>
+                  </div>
                 </div>
-                <div className="relative aspect-square overflow-hidden">
+              ) : (
+                <div className="flex justify-center bg-charcoal/3 px-2 py-3 sm:px-4 sm:py-4">
                   <Image
-                    src={pair.after.src}
-                    alt={pair.after.alt}
-                    width={pair.after.width}
-                    height={pair.after.height}
-                    sizes="(max-width: 1024px) 50vw, 25vw"
-                    className="h-full w-full object-cover"
+                    src={pair.image.src}
+                    alt={pair.image.alt}
+                    width={pair.image.width}
+                    height={pair.image.height}
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className="max-h-[min(520px,72vh)] w-full object-contain"
                   />
-                  <span className="absolute left-3 top-3 bg-earth/90 px-3 py-1 text-[0.65rem] uppercase tracking-[0.2em] text-ivory">
-                    After
-                  </span>
                 </div>
-              </div>
+              )}
               <div className="border-t border-border p-6 sm:p-7">
                 <h3 className="font-serif text-lg text-charcoal sm:text-xl">
                   {pair.label}
