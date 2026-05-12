@@ -1,3 +1,14 @@
+export const contactInfo = {
+  phone: "+91 9650821800",
+  phone2: "+91 9140090880",
+  email: "info@dermapathy.com",
+  instagram: "dermapathy_clinic",
+  facebook: "dermapathy",
+  address:
+    "1/44 First Floor, opposite Ipsum Diagnostics, Vijayant Khand, Gomti Nagar, LUCKNOW",
+  timings: "11 AM - 05 PM",
+} as const;
+
 export const siteConfig = {
   name: "Dermapathy",
   shortName: "Dermapathy",
@@ -8,14 +19,15 @@ export const siteConfig = {
   ogImage: "/og.png",
   locale: "en_US",
   contact: {
-    email: "care@dermapathy.com",
-    phone: "+91 00000 00000",
-    address: "Dermapathy Clinic, India",
+    email: contactInfo.email,
+    phone: contactInfo.phone,
+    phone2: contactInfo.phone2,
+    address: contactInfo.address,
+    timings: contactInfo.timings,
   },
   social: {
-    instagram: "https://instagram.com",
-    facebook: "https://facebook.com",
-    youtube: "https://youtube.com",
+    instagram: `https://www.instagram.com/${contactInfo.instagram}/`,
+    facebook: `https://www.facebook.com/${contactInfo.facebook}`,
   },
   founded: "2014",
   nav: [
@@ -28,3 +40,8 @@ export const siteConfig = {
 } as const;
 
 export type SiteConfig = typeof siteConfig;
+
+/** `tel:` href — strips spaces, keeps leading + */
+export function telHref(phone: string) {
+  return `tel:${phone.replace(/\s/g, "")}`;
+}

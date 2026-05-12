@@ -72,16 +72,19 @@ export function organizationJsonLd() {
     logo: `${siteConfig.url}/logo.png`,
     description: siteConfig.description,
     foundingDate: siteConfig.founded,
-    sameAs: [
-      siteConfig.social.instagram,
-      siteConfig.social.facebook,
-      siteConfig.social.youtube,
-    ],
+    sameAs: [siteConfig.social.instagram, siteConfig.social.facebook],
     contactPoint: [
       {
         "@type": "ContactPoint",
         email: siteConfig.contact.email,
-        telephone: siteConfig.contact.phone,
+        telephone: siteConfig.contact.phone.replace(/\s/g, ""),
+        contactType: "customer support",
+        areaServed: "IN",
+        availableLanguage: ["English", "Hindi"],
+      },
+      {
+        "@type": "ContactPoint",
+        telephone: siteConfig.contact.phone2.replace(/\s/g, ""),
         contactType: "customer support",
         areaServed: "IN",
         availableLanguage: ["English", "Hindi"],

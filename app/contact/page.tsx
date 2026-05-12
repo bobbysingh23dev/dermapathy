@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import { siteConfig } from "@/lib/site";
+import { siteConfig, telHref } from "@/lib/site";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
@@ -62,12 +62,18 @@ export default function ContactPage() {
               </div>
               <div>
                 <dt className="eyebrow">Phone</dt>
-                <dd className="mt-2 text-base">
+                <dd className="mt-2 flex flex-col gap-2 text-base">
                   <a
-                    href={`tel:${siteConfig.contact.phone.replace(/\s/g, "")}`}
+                    href={telHref(siteConfig.contact.phone)}
                     className="text-charcoal hover:text-earth"
                   >
                     {siteConfig.contact.phone}
+                  </a>
+                  <a
+                    href={telHref(siteConfig.contact.phone2)}
+                    className="text-charcoal hover:text-earth"
+                  >
+                    {siteConfig.contact.phone2}
                   </a>
                 </dd>
               </div>
@@ -80,7 +86,7 @@ export default function ContactPage() {
               <div>
                 <dt className="eyebrow">Hours</dt>
                 <dd className="mt-2 text-base text-charcoal">
-                  Monday – Saturday · 9:00 to 18:00 IST
+                  {siteConfig.contact.timings}
                 </dd>
               </div>
             </dl>

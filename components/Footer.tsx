@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { siteConfig } from "@/lib/site";
+import { siteConfig, telHref } from "@/lib/site";
 import { services } from "@/lib/services";
 
 export default function Footer() {
@@ -63,10 +63,18 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href={`tel:${siteConfig.contact.phone.replace(/\s/g, "")}`}
+                  href={telHref(siteConfig.contact.phone)}
                   className="hover:text-earth"
                 >
                   {siteConfig.contact.phone}
+                </a>
+              </li>
+              <li>
+                <a
+                  href={telHref(siteConfig.contact.phone2)}
+                  className="hover:text-earth"
+                >
+                  {siteConfig.contact.phone2}
                 </a>
               </li>
               <li>{siteConfig.contact.address}</li>
@@ -87,14 +95,6 @@ export default function Footer() {
                 className="hover:text-earth"
               >
                 Facebook
-              </a>
-              <a
-                href={siteConfig.social.youtube}
-                rel="noopener noreferrer"
-                target="_blank"
-                className="hover:text-earth"
-              >
-                YouTube
               </a>
             </div>
           </div>
