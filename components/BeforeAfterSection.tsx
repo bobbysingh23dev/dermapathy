@@ -51,51 +51,55 @@ export default function BeforeAfterSection({
           )}
         </div>
 
-        <div className="mt-14 grid gap-10 lg:grid-cols-2">
+        <div className="mt-14 grid gap-6 sm:gap-8 lg:grid-cols-2">
           {pairs.map((pair) => (
             <article key={pair.label} className="border border-border bg-ivory">
               {pair.kind === "two-up" ? (
-                <div className="grid grid-cols-2">
-                  <div className="relative aspect-square overflow-hidden border-r border-border">
-                    <Image
-                      src={pair.before.src}
-                      alt={pair.before.alt}
-                      width={pair.before.width}
-                      height={pair.before.height}
-                      sizes="(max-width: 1024px) 50vw, 25vw"
-                      className="h-full w-full object-cover"
-                    />
-                    <span className="absolute left-3 top-3 bg-charcoal/85 px-3 py-1 text-[0.65rem] uppercase tracking-[0.2em] text-ivory">
-                      Before
-                    </span>
-                  </div>
-                  <div className="relative aspect-square overflow-hidden">
-                    <Image
-                      src={pair.after.src}
-                      alt={pair.after.alt}
-                      width={pair.after.width}
-                      height={pair.after.height}
-                      sizes="(max-width: 1024px) 50vw, 25vw"
-                      className="h-full w-full object-cover"
-                    />
-                    <span className="absolute left-3 top-3 bg-earth/90 px-3 py-1 text-[0.65rem] uppercase tracking-[0.2em] text-ivory">
-                      After
-                    </span>
+                <div className="mx-auto w-full max-w-lg sm:max-w-xl lg:max-w-2xl">
+                  <div className="aspect-2/1 w-full overflow-hidden border-b border-border">
+                    <div className="grid h-full grid-cols-2">
+                      <div className="relative min-h-0 overflow-hidden border-r border-border">
+                        <Image
+                          src={pair.before.src}
+                          alt={pair.before.alt}
+                          width={pair.before.width}
+                          height={pair.before.height}
+                          sizes="(max-width: 1024px) 45vw, 320px"
+                          className="h-full w-full object-cover object-center"
+                        />
+                        <span className="absolute left-2 top-2 bg-charcoal/85 px-2 py-0.5 text-[0.6rem] uppercase tracking-[0.18em] text-ivory sm:left-3 sm:top-3 sm:px-3 sm:py-1 sm:text-[0.65rem]">
+                          Before
+                        </span>
+                      </div>
+                    <div className="relative min-h-0 overflow-hidden">
+                      <Image
+                        src={pair.after.src}
+                        alt={pair.after.alt}
+                        width={pair.after.width}
+                        height={pair.after.height}
+                        sizes="(max-width: 1024px) 45vw, 320px"
+                        className="h-full w-full object-cover object-center"
+                      />
+                      <span className="absolute left-2 top-2 bg-earth/90 px-2 py-0.5 text-[0.6rem] uppercase tracking-[0.18em] text-ivory sm:left-3 sm:top-3 sm:px-3 sm:py-1 sm:text-[0.65rem]">
+                        After
+                      </span>
+                    </div>
                   </div>
                 </div>
+                </div>
               ) : (
-                <div className="flex justify-center bg-charcoal/3 px-2 py-3 sm:px-4 sm:py-4">
+                <div className="bg-charcoal/3 p-1.5 sm:p-2">
                   <Image
                     src={pair.image.src}
                     alt={pair.image.alt}
                     width={pair.image.width}
                     height={pair.image.height}
                     sizes="(max-width: 1024px) 100vw, 50vw"
-                    className="max-h-[min(520px,72vh)] w-full object-contain"
+                    className="block h-auto w-full max-w-full object-contain max-h-[min(420px,62vh)] sm:max-h-[min(460px,58vh)] lg:max-h-[min(520px,55vh)]"
                   />
                 </div>
               )}
-              <div className="border-t border-border p-6 sm:p-7">
+              <div className="border-t border-border px-4 py-4 sm:px-5 sm:py-5">
                 <h3 className="font-serif text-lg text-charcoal sm:text-xl">
                   {pair.label}
                 </h3>
