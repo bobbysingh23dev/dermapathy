@@ -86,8 +86,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${display.variable} ${body.variable}`}>
-      <body className="min-h-screen flex flex-col bg-ivory text-charcoal antialiased">
+    <html lang="en" className={`${display.variable} ${body.variable}`} suppressHydrationWarning>
+      <body
+        className="min-h-screen flex flex-col bg-ivory text-charcoal antialiased"
+        suppressHydrationWarning
+      >
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

@@ -223,8 +223,7 @@ export const services: Service[] = [
       },
       {
         step: "Maintenance",
-        description:
-          "Quarterly review to keep results compounding over time.",
+        description: "Quarterly review to keep results compounding over time.",
       },
     ],
     faq: [

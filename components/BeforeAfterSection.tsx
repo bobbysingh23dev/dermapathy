@@ -71,21 +71,21 @@ export default function BeforeAfterSection({
                           Before
                         </span>
                       </div>
-                    <div className="relative min-h-0 overflow-hidden">
-                      <Image
-                        src={pair.after.src}
-                        alt={pair.after.alt}
-                        width={pair.after.width}
-                        height={pair.after.height}
-                        sizes="(max-width: 1024px) 45vw, 320px"
-                        className="h-full w-full object-cover object-center"
-                      />
-                      <span className="absolute left-2 top-2 bg-earth/90 px-2 py-0.5 text-[0.6rem] uppercase tracking-[0.18em] text-ivory sm:left-3 sm:top-3 sm:px-3 sm:py-1 sm:text-[0.65rem]">
-                        After
-                      </span>
+                      <div className="relative min-h-0 overflow-hidden">
+                        <Image
+                          src={pair.after.src}
+                          alt={pair.after.alt}
+                          width={pair.after.width}
+                          height={pair.after.height}
+                          sizes="(max-width: 1024px) 45vw, 320px"
+                          className="h-full w-full object-cover object-center"
+                        />
+                        <span className="absolute left-2 top-2 bg-earth/90 px-2 py-0.5 text-[0.6rem] uppercase tracking-[0.18em] text-ivory sm:left-3 sm:top-3 sm:px-3 sm:py-1 sm:text-[0.65rem]">
+                          After
+                        </span>
+                      </div>
                     </div>
                   </div>
-                </div>
                 </div>
               ) : (
                 <div className="bg-charcoal/3 p-1.5 sm:p-2">

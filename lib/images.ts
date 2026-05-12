@@ -23,12 +23,12 @@ export const heroImageHair: SiteImage = {
   height: 1500,
 };
 
-// ───────── ABOUT / STORY ─────────
+// ───────── ABOUT / STORY (`public/images/docter.png`) ─────────
 export const aboutStoryImage: SiteImage = {
-  src: u("photo-1551884170-09fb70a3a2ed", 1400),
-  alt: "Modern dermatology clinic interior",
-  width: 1400,
-  height: 1750,
+  src: "/images/docter.png",
+  alt: "Dermapathy dermatologist",
+  width: 1122,
+  height: 1402,
 };
 
 export const processAccentImage: SiteImage = {

@@ -5,11 +5,7 @@ import { notFound } from "next/navigation";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
-import {
-  services,
-  getServiceBySlug,
-  getAllServiceSlugs,
-} from "@/lib/services";
+import { services, getServiceBySlug, getAllServiceSlugs } from "@/lib/services";
 import { serviceImagesBySlug, serviceAccentImage } from "@/lib/images";
 import { buildMetadata, serviceJsonLd } from "@/lib/seo";
 
@@ -18,11 +14,12 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata(
-  props: PageProps<"/services/[slug]">
+  props: PageProps<"/services/[slug]">,
 ): Promise<Metadata> {
   const { slug } = await props.params;
   const service = getServiceBySlug(slug);
-  if (!service) return buildMetadata({ title: "Service not found", noIndex: true });
+  if (!service)
+    return buildMetadata({ title: "Service not found", noIndex: true });
   return buildMetadata({
     title: service.metaTitle,
     description: service.metaDescription,
@@ -31,7 +28,7 @@ export async function generateMetadata(
 }
 
 export default async function ServiceDetailPage(
-  props: PageProps<"/services/[slug]">
+  props: PageProps<"/services/[slug]">,
 ) {
   const { slug } = await props.params;
   const service = getServiceBySlug(slug);
@@ -50,7 +47,7 @@ export default async function ServiceDetailPage(
               title: service.title,
               description: service.metaDescription,
               slug: service.slug,
-            })
+            }),
           ),
         }}
       />

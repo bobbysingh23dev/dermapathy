@@ -35,9 +35,7 @@ export default function CTASection({
           </h2>
         </div>
         <div className="lg:col-span-5">
-          <p className="text-base leading-8 text-muted">
-            {description}
-          </p>
+          <p className="text-base leading-8 text-muted">{description}</p>
           <div className="mt-7 flex flex-wrap gap-3">
             <Link href={primaryHref} className="btn-primary">
               {primaryLabel}
