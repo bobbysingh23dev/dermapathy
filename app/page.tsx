@@ -117,7 +117,7 @@ export default function HomePage() {
       <BeforeAfterSection
         eyebrow="Hair · Patient Results"
         title="Hair restoration, real outcomes."
-        description="A small selection of the kinds of results our hair restoration patients see at 9–12 months."
+        description="Separate baseline (B) and follow-up (A) photographs per case — same layout as skin outcomes below."
         pairs={hairBeforeAfter}
         ctaHref="/services/hair-transplant"
         ctaLabel="Hair Transplant Details"

@@ -99,57 +99,78 @@ export type BeforeAfterSingleFrame = {
 
 export type BeforeAfterPair = BeforeAfterTwoUp | BeforeAfterSingleFrame;
 
+/** Hair home gallery: B = before (left), A = after (right). Four separate two-up rows. */
 export const hairBeforeAfter: BeforeAfterPair[] = [
   {
     kind: "two-up",
-    label: "Hair restoration — pre‑op and follow‑up",
+    label: "Hair comparison I",
     description:
-      "Separate clinical photographs: baseline and result after the growth phase.",
+      "Separate baseline (B) and follow-up (A) clinical photographs.",
     before: {
-      src: "/images/9.jpeg",
-      alt: "Scalp and hair — baseline before hair restoration procedure",
-      width: 3024,
-      height: 4032,
+      src: "/images/HB1.png",
+      alt: "Hair restoration — before treatment",
+      width: 289,
+      height: 285,
     },
     after: {
-      src: "/images/9-after.jpeg",
-      alt: "Same region after treatment — increased coverage",
-      width: 3024,
-      height: 4032,
+      src: "/images/HA1.png",
+      alt: "Hair restoration — after treatment",
+      width: 269,
+      height: 285,
     },
   },
   {
-    kind: "single-frame",
-    label: "Side‑by‑side comparison (single image)",
+    kind: "two-up",
+    label: "Hair comparison II",
     description:
-      "Before and after captured in one frame for direct comparison.",
-    image: {
-      src: "/images/6.jpeg",
-      alt: "Hair restoration patient: before and after views shown side by side in one photograph",
-      width: 1600,
-      height: 800,
+      "Separate baseline (B) and follow-up (A) clinical photographs.",
+    before: {
+      src: "/images/HB2.png",
+      alt: "Hair restoration — before treatment",
+      width: 269,
+      height: 285,
+    },
+    after: {
+      src: "/images/HA2.png",
+      alt: "Hair restoration — after treatment",
+      width: 262,
+      height: 284,
     },
   },
   {
-    kind: "single-frame",
-    label: "Combined before / after view",
-    description: "Single composite clinical photograph.",
-    image: {
-      src: "/images/3.jpeg",
-      alt: "Hair restoration: before and after comparison in one vertical composite clinical image",
-      width: 853,
-      height: 1280,
+    kind: "two-up",
+    label: "Hair comparison III",
+    description:
+      "Separate baseline (B) and follow-up (A) clinical photographs.",
+    before: {
+      src: "/images/HB3.png",
+      alt: "Hair restoration — before treatment",
+      width: 359,
+      height: 502,
+    },
+    after: {
+      src: "/images/HA3.png",
+      alt: "Hair restoration — after treatment",
+      width: 359,
+      height: 502,
     },
   },
   {
-    kind: "single-frame",
-    label: "Outcome documentation (single frame)",
-    description: "Before and after presented together in one image.",
-    image: {
-      src: "/images/7.jpeg",
-      alt: "Hair restoration outcome: before and after regions shown together in one square-format clinical photograph",
-      width: 1600,
-      height: 1600,
+    kind: "two-up",
+    label: "Hair comparison IV",
+    description:
+      "Separate baseline (B) and follow-up (A) clinical photographs.",
+    before: {
+      src: "/images/H4B.png",
+      alt: "Hair restoration — before treatment",
+      width: 427,
+      height: 414,
+    },
+    after: {
+      src: "/images/H4A.png",
+      alt: "Hair restoration — after treatment",
+      width: 412,
+      height: 414,
     },
   },
 ];
