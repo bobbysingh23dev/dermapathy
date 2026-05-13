@@ -119,20 +119,6 @@ export default async function ServiceDetailPage(
                 </div>
               </div>
             </div>
-            <div className="mx-auto w-full max-w-7xl border-t border-border bg-cream px-6 py-12 sm:px-8 lg:px-12 lg:py-14">
-              <p className="eyebrow">Benefits</p>
-              <ul className="mt-6 grid gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-2">
-                {service.benefits.map((b) => (
-                  <li
-                    key={b}
-                    className="flex gap-3 border border-border bg-ivory p-5 text-sm leading-7 text-charcoal-soft sm:p-6"
-                  >
-                    <span aria-hidden className="mt-2 h-px w-3 shrink-0 bg-earth" />
-                    <span>{b}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
           </>
         ) : (
           <div className="mx-auto grid w-full max-w-7xl gap-12 px-6 py-16 sm:px-8 lg:grid-cols-12 lg:px-12 lg:py-24">
@@ -190,19 +176,56 @@ export default async function ServiceDetailPage(
       </section>
 
       <section className="border-b border-border bg-cream">
-        <div className="mx-auto grid w-full max-w-7xl gap-12 px-6 py-20 sm:px-8 lg:grid-cols-12 lg:px-12 lg:py-24">
-          <div className="lg:col-span-5">
-            <p className="eyebrow">Overview</p>
-            <h2 className="mt-5 font-serif text-[2rem] leading-[1.15] tracking-tight text-charcoal sm:text-[2.5rem]">
-              How we approach this work.
-            </h2>
+        {service.slug === "hair-transplant" ? (
+          <div className="mx-auto w-full max-w-7xl px-6 py-20 sm:px-8 lg:px-12 lg:py-24">
+            <header className="max-w-2xl">
+              <p className="eyebrow">Overview</p>
+              <h2 className="mt-5 font-serif text-[2rem] leading-[1.15] tracking-tight text-charcoal sm:text-[2.5rem]">
+                Why patients choose this programme.
+              </h2>
+            </header>
+
+            <div className="mt-14 sm:mt-16">
+              <p className="eyebrow">Benefits</p>
+              <span aria-hidden className="gold-rule" />
+              <ul className="mt-8 grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-x-12 sm:gap-y-12 lg:mt-10 lg:grid-cols-4 lg:gap-x-8 lg:gap-y-0">
+                {service.benefits.map((b, i) => (
+                  <li
+                    key={b}
+                    className="min-w-0 lg:border-l lg:border-border lg:pl-8 lg:first:border-l-0 lg:first:pl-0"
+                  >
+                    <p className="font-serif text-3xl leading-none tracking-tight text-gold tabular-nums">
+                      {String(i + 1).padStart(2, "0")}
+                    </p>
+                    <p className="mt-4 text-sm leading-6 text-charcoal-soft sm:text-[0.9375rem] sm:leading-7">
+                      {b}
+                    </p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="relative mt-16 max-w-3xl border-t border-border pt-12 sm:mt-20 sm:pt-14">
+              <p className="text-base leading-8 text-muted sm:text-lg">
+                {service.longDescription}
+              </p>
+            </div>
           </div>
-          <div className="lg:col-span-7">
-            <p className="text-base leading-8 text-muted sm:text-lg">
-              {service.longDescription}
-            </p>
+        ) : (
+          <div className="mx-auto grid w-full max-w-7xl gap-12 px-6 py-20 sm:px-8 lg:grid-cols-12 lg:px-12 lg:py-24">
+            <div className="lg:col-span-5">
+              <p className="eyebrow">Overview</p>
+              <h2 className="mt-5 font-serif text-[2rem] leading-[1.15] tracking-tight text-charcoal sm:text-[2.5rem]">
+                How we approach this work.
+              </h2>
+            </div>
+            <div className="lg:col-span-7">
+              <p className="text-base leading-8 text-muted sm:text-lg">
+                {service.longDescription}
+              </p>
+            </div>
           </div>
-        </div>
+        )}
       </section>
 
       <section className="border-b border-border bg-ivory">
