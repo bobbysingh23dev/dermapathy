@@ -3,10 +3,11 @@ import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import BeforeAfterSection from "@/components/BeforeAfterSection";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
 import { services, getServiceBySlug, getAllServiceSlugs } from "@/lib/services";
-import { serviceImagesBySlug, serviceAccentImage } from "@/lib/images";
+import { serviceImagesBySlug, serviceAccentImage, hairTransplantGalleryPairs } from "@/lib/images";
 import { buildMetadata, serviceJsonLd } from "@/lib/seo";
 
 export async function generateStaticParams() {
@@ -34,7 +35,11 @@ export default async function ServiceDetailPage(
   const service = getServiceBySlug(slug);
   if (!service) notFound();
 
-  const others = services.filter((s) => s.slug !== service.slug).slice(0, 3);
+  const others = services
+    .filter(
+      (s) => s.slug !== service.slug && s.category === service.category,
+    )
+    .slice(0, 3);
   const accent = serviceImagesBySlug[service.slug] ?? serviceAccentImage;
 
   return (
@@ -58,7 +63,13 @@ export default async function ServiceDetailPage(
             items={[
               { name: "Home", href: "/" },
               { name: "Treatments", href: "/services" },
-              { name: service.title, href: `/services/${service.slug}` },
+              {
+                name:
+                  service.slug === "hair-transplant"
+                    ? "Hair transplant"
+                    : service.title,
+                href: `/services/${service.slug}`,
+              },
             ]}
           />
         </div>
@@ -78,8 +89,13 @@ export default async function ServiceDetailPage(
               <Link href="/contact" className="btn-primary">
                 Book Consultation
               </Link>
-              <Link href="/services" className="btn-secondary">
-                All Treatments
+              <Link
+                href="/services"
+                className="btn-secondary"
+              >
+                {service.category === "hair"
+                  ? "All hair treatments"
+                  : "All skin treatments"}
               </Link>
             </div>
           </div>
@@ -153,6 +169,19 @@ export default async function ServiceDetailPage(
         </div>
       </section>
 
+      {service.slug === "hair-transplant" ? (
+        <BeforeAfterSection
+          eyebrow="Clinical gallery"
+          title="Before & after"
+          description="Separate files per case: B = baseline (left), A = follow-up (right). Full set of outcomes on this page."
+          pairs={hairTransplantGalleryPairs}
+          twoUpDensity="full"
+          ctaHref="/contact"
+          ctaLabel="Book consultation"
+          background="cream"
+        />
+      ) : null}
+
       <FAQSection
         eyebrow="Common Questions"
         title={`About ${service.title}.`}
@@ -161,9 +190,11 @@ export default async function ServiceDetailPage(
 
       <section className="border-b border-border bg-cream">
         <div className="mx-auto w-full max-w-7xl px-6 py-20 sm:px-8 lg:px-12">
-          <p className="eyebrow">More Treatments</p>
+          <p className="eyebrow">More in this specialty</p>
           <h2 className="mt-5 font-serif text-[2rem] leading-[1.15] tracking-tight text-charcoal sm:text-[2.5rem]">
-            Continue exploring.
+            {service.category === "hair"
+              ? "Other hair services."
+              : "Other skin services."}
           </h2>
           <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {others.map((s) => (

@@ -99,22 +99,24 @@ export type BeforeAfterSingleFrame = {
 
 export type BeforeAfterPair = BeforeAfterTwoUp | BeforeAfterSingleFrame;
 
-/** Hair home gallery: B = before (left), A = after (right). Four separate two-up rows. */
-export const hairBeforeAfter: BeforeAfterPair[] = [
+const hairGalleryDescription =
+  "Separate baseline (B) and follow-up (A) clinical photographs.";
+
+/** Full hair transplant before/after set (B = before, A = after). */
+export const hairTransplantGalleryPairs: BeforeAfterPair[] = [
   {
     kind: "two-up",
     label: "Hair comparison I",
-    description:
-      "Separate baseline (B) and follow-up (A) clinical photographs.",
+    description: hairGalleryDescription,
     before: {
       src: "/images/HB1.png",
-      alt: "Hair restoration — before treatment",
+      alt: "Hair restoration — before",
       width: 289,
       height: 285,
     },
     after: {
       src: "/images/HA1.png",
-      alt: "Hair restoration — after treatment",
+      alt: "Hair restoration — after",
       width: 269,
       height: 285,
     },
@@ -122,17 +124,16 @@ export const hairBeforeAfter: BeforeAfterPair[] = [
   {
     kind: "two-up",
     label: "Hair comparison II",
-    description:
-      "Separate baseline (B) and follow-up (A) clinical photographs.",
+    description: hairGalleryDescription,
     before: {
       src: "/images/HB2.png",
-      alt: "Hair restoration — before treatment",
+      alt: "Hair restoration — before",
       width: 269,
       height: 285,
     },
     after: {
       src: "/images/HA2.png",
-      alt: "Hair restoration — after treatment",
+      alt: "Hair restoration — after",
       width: 262,
       height: 284,
     },
@@ -140,17 +141,16 @@ export const hairBeforeAfter: BeforeAfterPair[] = [
   {
     kind: "two-up",
     label: "Hair comparison III",
-    description:
-      "Separate baseline (B) and follow-up (A) clinical photographs.",
+    description: hairGalleryDescription,
     before: {
       src: "/images/HB3.png",
-      alt: "Hair restoration — before treatment",
+      alt: "Hair restoration — before",
       width: 359,
       height: 502,
     },
     after: {
       src: "/images/HA3.png",
-      alt: "Hair restoration — after treatment",
+      alt: "Hair restoration — after",
       width: 359,
       height: 502,
     },
@@ -158,22 +158,127 @@ export const hairBeforeAfter: BeforeAfterPair[] = [
   {
     kind: "two-up",
     label: "Hair comparison IV",
-    description:
-      "Separate baseline (B) and follow-up (A) clinical photographs.",
+    description: hairGalleryDescription,
     before: {
       src: "/images/H4B.png",
-      alt: "Hair restoration — before treatment",
+      alt: "Hair restoration — before",
       width: 427,
       height: 414,
     },
     after: {
       src: "/images/H4A.png",
-      alt: "Hair restoration — after treatment",
+      alt: "Hair restoration — after",
       width: 412,
       height: 414,
     },
   },
+  {
+    kind: "two-up",
+    label: "Hair comparison V",
+    description: hairGalleryDescription,
+    before: {
+      src: "/images/HB5.png",
+      alt: "Hair restoration — before",
+      width: 412,
+      height: 404,
+    },
+    after: {
+      src: "/images/HA5.png",
+      alt: "Hair restoration — after",
+      width: 412,
+      height: 404,
+    },
+  },
+  {
+    kind: "two-up",
+    label: "Hair comparison VI",
+    description: hairGalleryDescription,
+    before: {
+      src: "/images/HB6.png",
+      alt: "Hair restoration — before",
+      width: 590,
+      height: 583,
+    },
+    after: {
+      src: "/images/HA6.png",
+      alt: "Hair restoration — after",
+      width: 590,
+      height: 583,
+    },
+  },
+  {
+    kind: "two-up",
+    label: "Hair comparison VII",
+    description: hairGalleryDescription,
+    before: {
+      src: "/images/HB7.png",
+      alt: "Hair restoration — before",
+      width: 335,
+      height: 346,
+    },
+    after: {
+      src: "/images/HA7.png",
+      alt: "Hair restoration — after",
+      width: 335,
+      height: 418,
+    },
+  },
+  {
+    kind: "two-up",
+    label: "Hair comparison VIII",
+    description: hairGalleryDescription,
+    before: {
+      src: "/images/HB8.png",
+      alt: "Hair restoration — before",
+      width: 655,
+      height: 686,
+    },
+    after: {
+      src: "/images/HA8.png",
+      alt: "Hair restoration — after",
+      width: 655,
+      height: 742,
+    },
+  },
+  {
+    kind: "two-up",
+    label: "Hair comparison IX",
+    description: hairGalleryDescription,
+    before: {
+      src: "/images/HB9.png",
+      alt: "Hair restoration — before",
+      width: 716,
+      height: 705,
+    },
+    after: {
+      src: "/images/HA9.png",
+      alt: "Hair restoration — after",
+      width: 716,
+      height: 705,
+    },
+  },
+  {
+    kind: "two-up",
+    label: "Hair comparison X",
+    description: hairGalleryDescription,
+    before: {
+      src: "/images/HB10.png",
+      alt: "Hair restoration — before",
+      width: 2555,
+      height: 3042,
+    },
+    after: {
+      src: "/images/HA10.png",
+      alt: "Hair restoration — after",
+      width: 656,
+      height: 931,
+    },
+  },
 ];
+
+/** Home: first four hair comparisons (subset of `hairTransplantGalleryPairs`). */
+export const hairBeforeAfter: BeforeAfterPair[] =
+  hairTransplantGalleryPairs.slice(0, 4);
 
 /** File naming: B suffix = before (left), A suffix = after (right). */
 export const skinBeforeAfter: BeforeAfterPair[] = [

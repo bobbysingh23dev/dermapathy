@@ -98,7 +98,7 @@ export default function HomePage() {
               href="/services/hair-transplant"
               className="text-xs uppercase tracking-[0.18em] text-charcoal hover:text-earth"
             >
-              Hair Transplant Details →
+              Hair transplant →
             </Link>
           </div>
 
@@ -120,7 +120,7 @@ export default function HomePage() {
         description="Separate baseline (B) and follow-up (A) photographs per case — same layout as skin outcomes below."
         pairs={hairBeforeAfter}
         ctaHref="/services/hair-transplant"
-        ctaLabel="Hair Transplant Details"
+        ctaLabel="Hair transplant page"
         background="cream"
       />
 

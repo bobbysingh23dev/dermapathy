@@ -10,6 +10,8 @@ type Props = {
   ctaHref?: string;
   ctaLabel?: string;
   background?: "ivory" | "cream";
+  /** Larger single-column comparisons with `object-contain` (dedicated hair gallery). */
+  twoUpDensity?: "default" | "full";
 };
 
 export default function BeforeAfterSection({
@@ -20,8 +22,10 @@ export default function BeforeAfterSection({
   ctaHref,
   ctaLabel,
   background = "ivory",
+  twoUpDensity = "default",
 }: Props) {
   const bgClass = background === "cream" ? "bg-cream" : "bg-ivory";
+  const full = twoUpDensity === "full";
   return (
     <section
       aria-label={`${eyebrow} — before and after`}
@@ -51,39 +55,78 @@ export default function BeforeAfterSection({
           )}
         </div>
 
-        <div className="mt-14 grid gap-6 sm:gap-8 lg:grid-cols-2">
+        <div
+          className={
+            full
+              ? "mt-14 flex flex-col gap-14 sm:gap-16 lg:gap-20"
+              : "mt-14 grid gap-6 sm:gap-8 lg:grid-cols-2"
+          }
+        >
           {pairs.map((pair) => (
-            <article key={pair.label} className="border border-border bg-ivory">
+            <article
+              key={pair.label}
+              className={`border border-border bg-ivory ${full ? "mx-auto w-full max-w-6xl shadow-sm" : ""}`}
+            >
               {pair.kind === "two-up" ? (
-                <div className="mx-auto w-full max-w-lg sm:max-w-xl lg:max-w-2xl">
-                  <div className="aspect-2/1 w-full overflow-hidden border-b border-border">
-                    <div className="grid h-full grid-cols-2">
-                      <div className="relative min-h-0 overflow-hidden border-r border-border">
-                        <Image
-                          src={pair.before.src}
-                          alt={pair.before.alt}
-                          width={pair.before.width}
-                          height={pair.before.height}
-                          sizes="(max-width: 1024px) 45vw, 320px"
-                          className="h-full w-full object-cover object-center"
-                        />
-                        <span className="absolute left-2 top-2 bg-charcoal/85 px-2 py-0.5 text-[0.6rem] uppercase tracking-[0.18em] text-ivory sm:left-3 sm:top-3 sm:px-3 sm:py-1 sm:text-[0.65rem]">
-                          Before
-                        </span>
-                      </div>
-                      <div className="relative min-h-0 overflow-hidden">
-                        <Image
-                          src={pair.after.src}
-                          alt={pair.after.alt}
-                          width={pair.after.width}
-                          height={pair.after.height}
-                          sizes="(max-width: 1024px) 45vw, 320px"
-                          className="h-full w-full object-cover object-center"
-                        />
-                        <span className="absolute left-2 top-2 bg-earth/90 px-2 py-0.5 text-[0.6rem] uppercase tracking-[0.18em] text-ivory sm:left-3 sm:top-3 sm:px-3 sm:py-1 sm:text-[0.65rem]">
-                          After
-                        </span>
-                      </div>
+                <div
+                  className={
+                    full
+                      ? "w-full"
+                      : "mx-auto w-full max-w-lg sm:max-w-xl lg:max-w-2xl"
+                  }
+                >
+                  <div
+                    className={
+                      full
+                        ? "grid min-h-[min(52vh,480px)] w-full grid-cols-2 overflow-hidden border-b border-border sm:min-h-[min(58vh,560px)] lg:min-h-[min(64vh,680px)]"
+                        : "aspect-2/1 grid h-full w-full grid-cols-2 overflow-hidden border-b border-border"
+                    }
+                  >
+                    <div
+                      className={`relative min-h-0 overflow-hidden border-r border-border ${full ? "bg-charcoal/[0.05]" : ""}`}
+                    >
+                      <Image
+                        src={pair.before.src}
+                        alt={pair.before.alt}
+                        width={pair.before.width}
+                        height={pair.before.height}
+                        sizes={
+                          full
+                            ? "(max-width: 1024px) 46vw, 640px"
+                            : "(max-width: 1024px) 45vw, 320px"
+                        }
+                        className={
+                          full
+                            ? "h-full w-full object-contain object-center"
+                            : "h-full w-full object-cover object-center"
+                        }
+                      />
+                      <span className="absolute left-2 top-2 bg-charcoal/85 px-2 py-0.5 text-[0.6rem] uppercase tracking-[0.18em] text-ivory sm:left-3 sm:top-3 sm:px-3 sm:py-1 sm:text-[0.65rem]">
+                        Before
+                      </span>
+                    </div>
+                    <div
+                      className={`relative min-h-0 overflow-hidden ${full ? "bg-charcoal/[0.05]" : ""}`}
+                    >
+                      <Image
+                        src={pair.after.src}
+                        alt={pair.after.alt}
+                        width={pair.after.width}
+                        height={pair.after.height}
+                        sizes={
+                          full
+                            ? "(max-width: 1024px) 46vw, 640px"
+                            : "(max-width: 1024px) 45vw, 320px"
+                        }
+                        className={
+                          full
+                            ? "h-full w-full object-contain object-center"
+                            : "h-full w-full object-cover object-center"
+                        }
+                      />
+                      <span className="absolute left-2 top-2 bg-earth/90 px-2 py-0.5 text-[0.6rem] uppercase tracking-[0.18em] text-ivory sm:left-3 sm:top-3 sm:px-3 sm:py-1 sm:text-[0.65rem]">
+                        After
+                      </span>
                     </div>
                   </div>
                 </div>

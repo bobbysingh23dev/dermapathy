@@ -33,6 +33,7 @@ export const siteConfig = {
   nav: [
     { label: "Home", href: "/" },
     { label: "About", href: "/about" },
+    { label: "Hair transplant", href: "/services/hair-transplant" },
     { label: "Treatments", href: "/services" },
     { label: "Blog", href: "/blog" },
     { label: "Contact", href: "/contact" },
