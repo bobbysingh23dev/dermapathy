@@ -154,41 +154,78 @@ export const hairBeforeAfter: BeforeAfterPair[] = [
   },
 ];
 
+/** File naming: B suffix = before (left), A suffix = after (right). */
 export const skinBeforeAfter: BeforeAfterPair[] = [
   {
     kind: "two-up",
-    label: "Acne & Pigmentation Programme",
+    label: "Comparison I",
     description:
-      "12-week protocol combining medical topicals and chemical peels.",
+      "Dermatologist-supervised protocol — separate baseline (B) and follow-up (A) photographs.",
     before: {
-      src: u("photo-1573497019418-b400bb3ab074", 800),
-      alt: "Skin clarity — before",
-      width: 800,
-      height: 800,
+      src: "/images/skin1B.png",
+      alt: "Skin — before treatment",
+      width: 613,
+      height: 1009,
     },
     after: {
-      src: u("photo-1487412947147-5cebf100ffc2", 800),
-      alt: "Skin clarity — after",
-      width: 800,
-      height: 800,
+      src: "/images/skin1A.png",
+      alt: "Skin — after treatment",
+      width: 534,
+      height: 1002,
     },
   },
   {
     kind: "two-up",
-    label: "Skin Rejuvenation",
+    label: "Comparison II",
     description:
-      "Microneedling + medical-grade topicals over six in-clinic sessions.",
+      "Dermatologist-supervised protocol — separate baseline (B) and follow-up (A) photographs.",
     before: {
-      src: u("photo-1531746020798-e6953c6e8e04", 800),
-      alt: "Skin rejuvenation — before",
-      width: 800,
-      height: 800,
+      src: "/images/Skin2B.png",
+      alt: "Skin — before treatment",
+      width: 592,
+      height: 988,
     },
     after: {
-      src: u("photo-1502823403499-6ccfcf4fb453", 800),
-      alt: "Skin rejuvenation — after",
-      width: 800,
-      height: 800,
+      src: "/images/Skin2A.png",
+      alt: "Skin — after treatment",
+      width: 594,
+      height: 1012,
+    },
+  },
+  {
+    kind: "two-up",
+    label: "Comparison III",
+    description:
+      "Dermatologist-supervised protocol — separate baseline (B) and follow-up (A) photographs.",
+    before: {
+      src: "/images/Skin3B.png",
+      alt: "Skin — before treatment",
+      width: 224,
+      height: 111,
+    },
+    after: {
+      src: "/images/Skin3A.png",
+      alt: "Skin — after treatment",
+      width: 224,
+      height: 111,
+    },
+  },
+  {
+    kind: "two-up",
+    label: "Comparison IV",
+    description:
+      "Dermatologist-supervised protocol — separate baseline (B) and follow-up (A) photographs.",
+    before: {
+      src: "/images/Skin4B.png",
+      alt: "Skin — before treatment",
+      width: 582,
+      height: 879,
+    },
+    after: {
+      src: "/images/Skin4A.png",
+      alt: "Skin — after treatment",
+      width: 574,
+      height: 909,
     },
   },
 ];
