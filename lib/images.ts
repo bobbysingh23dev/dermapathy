@@ -404,7 +404,7 @@ export const serviceAccentImage: SiteImage = skinAccent;
 export const serviceImagesBySlug: Record<string, SiteImage> = {
   "hair-transplant": {
     src: "/images/hairPrp.png",
-    alt: "In-clinic hair treatment — hands applying product during a scalp session",
+    alt: "Dermatologist performing an in-clinic hair treatment — hands applying product to the patient’s scalp",
     width: 1536,
     height: 1024,
   },

@@ -73,60 +73,120 @@ export default async function ServiceDetailPage(
             ]}
           />
         </div>
-        <div className="mx-auto grid w-full max-w-7xl gap-12 px-6 py-16 sm:px-8 lg:grid-cols-12 lg:px-12 lg:py-24">
-          <div className="lg:col-span-7">
-            <p className="eyebrow">
-              {service.category === "hair" ? "Hair Restoration" : "Skin Care"}
-            </p>
-            <span aria-hidden className="gold-rule" />
-            <h1 className="mt-5 font-serif text-[2.5rem] leading-[1.05] tracking-tight text-charcoal sm:text-[3.25rem]">
-              {service.title}
-            </h1>
-            <p className="mt-6 max-w-xl text-base leading-8 text-muted sm:text-lg">
-              {service.shortDescription}
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link href="/contact" className="btn-primary">
-                Book Consultation
-              </Link>
-              <Link
-                href="/services"
-                className="btn-secondary"
-              >
-                {service.category === "hair"
-                  ? "All hair treatments"
-                  : "All skin treatments"}
-              </Link>
-            </div>
-          </div>
 
-          <aside className="lg:col-span-5">
-            <div className="space-y-6">
-              <div className="relative aspect-3/2 overflow-hidden border border-border">
-                <Image
-                  src={accent.src}
-                  alt={accent.alt}
-                  width={accent.width}
-                  height={accent.height}
-                  priority
-                  sizes="(max-width: 1024px) 100vw, 40vw"
-                  className="h-full w-full object-cover"
-                />
-              </div>
-              <div className="border border-border bg-cream p-8 sm:p-10">
-                <p className="eyebrow">Benefits</p>
-                <ul className="mt-5 space-y-3 text-sm leading-7 text-charcoal-soft">
-                  {service.benefits.map((b) => (
-                    <li key={b} className="flex gap-3">
-                      <span aria-hidden className="mt-2 h-px w-3 bg-earth" />
-                      <span>{b}</span>
-                    </li>
-                  ))}
-                </ul>
+        {service.slug === "hair-transplant" ? (
+          <>
+            <div className="relative mt-8 w-full min-h-[min(88vh,920px)] sm:min-h-[min(90vh,960px)]">
+              <Image
+                src={accent.src}
+                alt={accent.alt}
+                fill
+                priority
+                sizes="100vw"
+                className="object-cover object-[50%_30%] brightness-[0.88] contrast-[1.03]"
+              />
+              <div
+                aria-hidden
+                className="absolute inset-0 z-[1] bg-charcoal/20"
+              />
+              <div
+                aria-hidden
+                className="absolute inset-0 z-[2] bg-gradient-to-b from-ivory/95 via-ivory/55 to-ivory/90 md:bg-gradient-to-r md:from-ivory md:from-0% md:via-ivory/85 md:via-45% md:to-transparent"
+              />
+              <div className="relative z-10 mx-auto flex min-h-[min(88vh,920px)] w-full max-w-7xl flex-col justify-end px-6 pb-14 pt-24 sm:px-8 sm:pb-16 sm:pt-28 md:justify-center md:pb-20 md:pt-32 lg:px-12">
+                <div className="max-w-xl md:max-w-lg">
+                  <p className="eyebrow text-charcoal-soft">Hair restoration</p>
+                  <span aria-hidden className="gold-rule" />
+                  <h1 className="mt-5 font-serif text-[2.5rem] leading-[1.05] tracking-tight text-charcoal sm:text-[3.25rem] lg:text-[3.5rem]">
+                    {service.title}
+                  </h1>
+                  <p className="mt-6 text-base leading-8 text-muted sm:text-lg">
+                    {service.shortDescription}
+                  </p>
+                  <p className="mt-4 text-sm font-medium leading-7 text-charcoal sm:max-w-md">
+                    In clinic: your dermatologist performs the treatment
+                    hands-on — the same doctor who planned your hairline and
+                    graft map.
+                  </p>
+                  <div className="mt-8 flex flex-wrap gap-3">
+                    <Link href="/contact" className="btn-primary">
+                      Book consultation
+                    </Link>
+                    <Link href="/services" className="btn-secondary">
+                      All hair treatments
+                    </Link>
+                  </div>
+                </div>
               </div>
             </div>
-          </aside>
-        </div>
+            <div className="mx-auto w-full max-w-7xl border-t border-border bg-cream px-6 py-12 sm:px-8 lg:px-12 lg:py-14">
+              <p className="eyebrow">Benefits</p>
+              <ul className="mt-6 grid gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-2">
+                {service.benefits.map((b) => (
+                  <li
+                    key={b}
+                    className="flex gap-3 border border-border bg-ivory p-5 text-sm leading-7 text-charcoal-soft sm:p-6"
+                  >
+                    <span aria-hidden className="mt-2 h-px w-3 shrink-0 bg-earth" />
+                    <span>{b}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </>
+        ) : (
+          <div className="mx-auto grid w-full max-w-7xl gap-12 px-6 py-16 sm:px-8 lg:grid-cols-12 lg:px-12 lg:py-24">
+            <div className="lg:col-span-7">
+              <p className="eyebrow">
+                {service.category === "hair" ? "Hair Restoration" : "Skin Care"}
+              </p>
+              <span aria-hidden className="gold-rule" />
+              <h1 className="mt-5 font-serif text-[2.5rem] leading-[1.05] tracking-tight text-charcoal sm:text-[3.25rem]">
+                {service.title}
+              </h1>
+              <p className="mt-6 max-w-xl text-base leading-8 text-muted sm:text-lg">
+                {service.shortDescription}
+              </p>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <Link href="/contact" className="btn-primary">
+                  Book Consultation
+                </Link>
+                <Link href="/services" className="btn-secondary">
+                  {service.category === "hair"
+                    ? "All hair treatments"
+                    : "All skin treatments"}
+                </Link>
+              </div>
+            </div>
+
+            <aside className="lg:col-span-5">
+              <div className="space-y-6">
+                <div className="relative aspect-3/2 overflow-hidden border border-border">
+                  <Image
+                    src={accent.src}
+                    alt={accent.alt}
+                    width={accent.width}
+                    height={accent.height}
+                    priority
+                    sizes="(max-width: 1024px) 100vw, 40vw"
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+                <div className="border border-border bg-cream p-8 sm:p-10">
+                  <p className="eyebrow">Benefits</p>
+                  <ul className="mt-5 space-y-3 text-sm leading-7 text-charcoal-soft">
+                    {service.benefits.map((b) => (
+                      <li key={b} className="flex gap-3">
+                        <span aria-hidden className="mt-2 h-px w-3 bg-earth" />
+                        <span>{b}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </aside>
+          </div>
+        )}
       </section>
 
       <section className="border-b border-border bg-cream">
