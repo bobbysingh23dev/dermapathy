@@ -403,10 +403,10 @@ export const serviceAccentImage: SiteImage = skinAccent;
 
 export const serviceImagesBySlug: Record<string, SiteImage> = {
   "hair-transplant": {
-    src: u("photo-1620916566398-39f1143ab7be", 1400),
-    alt: "Advanced FUE hair transplant procedure",
-    width: 1400,
-    height: 933,
+    src: "/images/hairPrp.png",
+    alt: "In-clinic hair treatment — hands applying product during a scalp session",
+    width: 1536,
+    height: 1024,
   },
   "prp-hair-therapy": {
     src: u("photo-1559757175-5700dde675bc", 1400),
