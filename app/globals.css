@@ -31,6 +31,7 @@
 
   --font-serif: var(--font-display, "Cormorant Garamond"), Georgia, serif;
   --font-sans: var(--font-body, "Inter"), system-ui, -apple-system, sans-serif;
+  --font-script: var(--font-script, "Parisienne"), "Segoe Script", cursive;
 }
 
 html {
@@ -125,6 +126,22 @@ section {
 .flourish {
   font-style: italic;
   color: var(--color-earth);
+}
+
+/* Handwritten signature — used for patient names in testimonials */
+.signature {
+  font-family: var(--font-script, "Parisienne"), "Segoe Script", cursive;
+  font-weight: 400;
+  line-height: 1;
+}
+
+/* Hide scrollbar on the testimonial slider track (still scrollable/swipeable) */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }
 
 /* Editorial outline-text — used for the split-headline hero */

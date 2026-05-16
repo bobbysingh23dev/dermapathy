@@ -412,6 +412,7 @@ export type Testimonial = {
   treatment: string;
   quote: string;
   rating: number;
+  date?: string;
   image?: SiteImage;
 };
 
@@ -424,18 +425,52 @@ export const testimonials: Testimonial[] = [
       "I recently visited Dr. Isha Singh's Dermapathy Skin Clinic, and I couldn't be more impressed! The clinic is well-connected and boasts a warm, welcoming atmosphere. Dr. Singh's expertise in dermatology is evident through her personalized treatment plans. My skin has never looked better! The staff is friendly and attentive, ensuring a comfortable experience. Highly recommend for anyone seeking top-notch skincare solutions!",
   },
   {
+    name: "Shivani",
+    treatment: "Quick Service",
+    rating: 5,
+    date: "30 Jan 2026",
+    quote:
+      "I had a great experience at Dr. Isha Singh's Dermapathy Skin Clinic! The service was quick and efficient. I didn't have to wait long for my appointment, and the care was excellent throughout.",
+  },
+  {
     name: "Monk",
     treatment: "Skin Treatment",
     rating: 5,
+    date: "25 Nov 2025",
     quote:
       "Dr. Isha Singh's Dermapathy Skin Clinic is amazing! I felt a speedy recovery after my treatment. The medicines they use are very effective and helped my skin a lot. The clinic is well connected, making it easy to get appointments. Plus, it's easily accessible, so I didn't have any trouble finding it. I highly recommend this clinic for great care!",
+  },
+  {
+    name: "Vivek Verma",
+    treatment: "Excellent Treatment",
+    rating: 5,
+    date: "05 Nov 2025",
+    quote:
+      "Excellent dermatologist. Listens carefully and explains the treatment clearly. Highly recommended!",
   },
   {
     name: "Adnan",
     treatment: "Dermatology Visit",
     rating: 5,
+    date: "05 Nov 2025",
     quote:
       "I had a great experience with Dermapathy. The prices were reasonable, which I liked a lot. They also had decent coverage for different services. The care was gentle and kind, making me feel comfortable. I waited less than half an hour for my appointment, which was fast. Overall, it was an excellent visit!",
+  },
+  {
+    name: "Kanhaiya",
+    treatment: "High-Standard Care",
+    rating: 5,
+    date: "05 Nov 2025",
+    quote:
+      "I had a great experience at Dermapathy! The prices are really reasonable, making it easy to get the care I need. The medicines they provide are very effective, and the wait was short.",
+  },
+  {
+    name: "Rahul Pal",
+    treatment: "Quick Service",
+    rating: 5,
+    date: "05 Nov 2025",
+    quote:
+      "Dermapathy is great! The doctors help you feel better fast — I got better quickly after my visit. Their prices are reasonable too. Highly recommend.",
   },
 ];
 

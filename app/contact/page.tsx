@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import ContactForm from "@/components/ContactForm";
 import { siteConfig, telHref } from "@/lib/site";
 import { buildMetadata } from "@/lib/seo";
 
@@ -93,112 +94,10 @@ export default function ContactPage() {
           </div>
 
           <div className="lg:col-span-7">
-            <form
-              className="border border-border bg-ivory p-8 sm:p-10"
-              aria-label="Contact form"
-            >
-              <p className="eyebrow">Send a message</p>
-              <h2 className="mt-4 font-serif text-2xl text-charcoal sm:text-[1.75rem]">
-                Tell us a little about you.
-              </h2>
-
-              <div className="mt-10 grid gap-6 sm:grid-cols-2">
-                <Field
-                  id="name"
-                  name="name"
-                  label="Name"
-                  type="text"
-                  autoComplete="name"
-                  required
-                />
-                <Field
-                  id="email"
-                  name="email"
-                  label="Email"
-                  type="email"
-                  autoComplete="email"
-                  required
-                />
-                <Field
-                  id="phone"
-                  name="phone"
-                  label="Phone"
-                  type="tel"
-                  autoComplete="tel"
-                />
-                <div className="flex flex-col">
-                  <label
-                    htmlFor="topic"
-                    className="eyebrow mb-3"
-                  >
-                    Topic
-                  </label>
-                  <select
-                    id="topic"
-                    name="topic"
-                    className="border-b border-border bg-transparent py-3 text-sm text-charcoal focus:border-charcoal focus:outline-none"
-                    defaultValue=""
-                  >
-                    <option value="" disabled>
-                      Select an option
-                    </option>
-                    <option>Hair Transplant (FUE / DHT)</option>
-                    <option>PRP Hair Therapy</option>
-                    <option>Scalp Treatment</option>
-                    <option>Skin Rejuvenation</option>
-                    <option>Acne &amp; Pigmentation</option>
-                    <option>Laser Treatments</option>
-                    <option>General enquiry</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className="mt-6">
-                <label htmlFor="message" className="eyebrow mb-3 block">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={5}
-                  required
-                  className="w-full resize-none border border-border bg-transparent p-4 text-sm leading-7 text-charcoal focus:border-charcoal focus:outline-none"
-                  placeholder="Briefly tell us what you're looking for…"
-                />
-              </div>
-
-              <div className="mt-8 flex flex-col-reverse items-start justify-between gap-4 sm:flex-row sm:items-center">
-                <p className="text-xs text-muted">
-                  We respect your privacy. We&apos;ll never share your details.
-                </p>
-                <button type="submit" className="btn-primary">
-                  Send Message
-                </button>
-              </div>
-            </form>
+            <ContactForm />
           </div>
         </div>
       </section>
     </>
-  );
-}
-
-type FieldProps = React.InputHTMLAttributes<HTMLInputElement> & {
-  label: string;
-  id: string;
-};
-
-function Field({ label, id, ...rest }: FieldProps) {
-  return (
-    <div className="flex flex-col">
-      <label htmlFor={id} className="eyebrow mb-3">
-        {label}
-      </label>
-      <input
-        id={id}
-        {...rest}
-        className="border-b border-border bg-transparent py-3 text-sm text-charcoal placeholder:text-muted focus:border-charcoal focus:outline-none"
-      />
-    </div>
   );
 }
