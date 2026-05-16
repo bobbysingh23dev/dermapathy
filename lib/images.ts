@@ -38,48 +38,6 @@ export const processAccentImage: SiteImage = {
   height: 1500,
 };
 
-// ───────── PRACTITIONERS (Dermatologists) ─────────
-export const practitioners: {
-  name: string;
-  role: string;
-  bio: string;
-  image: SiteImage;
-}[] = [
-  {
-    name: "Dr. Aarav Mehta",
-    role: "Lead Dermatologist & Hair Transplant Surgeon",
-    bio: "MD Dermatology, Diplomate of the American Board of Hair Restoration Surgery. Fifteen years of FUE and DHT experience with over 3,000 procedures performed.",
-    image: {
-      src: u("photo-1622253692010-333f2da6031d", 800),
-      alt: "Portrait of Dr. Aarav Mehta, lead dermatologist",
-      width: 800,
-      height: 1000,
-    },
-  },
-  {
-    name: "Dr. Meera Iyer",
-    role: "Consultant Dermatologist — Skin & Aesthetics",
-    bio: "MD Dermatology with fellowships in cosmetic dermatology and laser medicine. Known for honest, conservative aesthetic care that ages well.",
-    image: {
-      src: u("photo-1594824476967-48c8b964273f", 800),
-      alt: "Portrait of Dr. Meera Iyer, consultant dermatologist",
-      width: 800,
-      height: 1000,
-    },
-  },
-  {
-    name: "Dr. Rohan Kapoor",
-    role: "Consultant — Acne, Pigmentation & Lasers",
-    bio: "MD Dermatology, fellowship-trained in lasers and pigmentary disorders. Special interest in safe outcomes for South Asian skin tones.",
-    image: {
-      src: u("photo-1612531386530-97286d97c2d2", 800),
-      alt: "Portrait of Dr. Rohan Kapoor",
-      width: 800,
-      height: 1000,
-    },
-  },
-];
-
 // ───────── BEFORE / AFTER ─────────
 export type BeforeAfterTwoUp = {
   kind: "two-up";

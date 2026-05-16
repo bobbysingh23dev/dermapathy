@@ -6,7 +6,6 @@ import ServiceCard from "@/components/ServiceCard";
 import BlogCard from "@/components/BlogCard";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
-import PractitionersSection from "@/components/PractitionersSection";
 import BeforeAfterSection from "@/components/BeforeAfterSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import { hairServices, skinServices } from "@/lib/services";
@@ -253,8 +252,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      <PractitionersSection />
 
       <TestimonialsSection />
 

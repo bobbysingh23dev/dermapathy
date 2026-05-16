@@ -3,7 +3,6 @@ import Image from "next/image";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
-import PractitionersSection from "@/components/PractitionersSection";
 import { buildMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site";
 import { aboutStoryImage, processAccentImage } from "@/lib/images";
@@ -115,8 +114,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
-      <PractitionersSection variant="compact" />
 
       <section className="border-b border-border bg-cream">
         <div className="mx-auto grid w-full max-w-7xl gap-12 px-6 py-20 sm:px-8 lg:grid-cols-12 lg:gap-16 lg:px-12 lg:py-24">

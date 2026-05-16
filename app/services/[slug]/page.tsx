@@ -41,6 +41,8 @@ export default async function ServiceDetailPage(
     )
     .slice(0, 3);
   const accent = serviceImagesBySlug[service.slug] ?? serviceAccentImage;
+  const stackedOverview =
+    service.slug === "hair-transplant" || service.category === "skin";
 
   return (
     <>
@@ -158,17 +160,19 @@ export default async function ServiceDetailPage(
                     className="h-full w-full object-cover"
                   />
                 </div>
-                <div className="border border-border bg-cream p-8 sm:p-10">
-                  <p className="eyebrow">Benefits</p>
-                  <ul className="mt-5 space-y-3 text-sm leading-7 text-charcoal-soft">
-                    {service.benefits.map((b) => (
-                      <li key={b} className="flex gap-3">
-                        <span aria-hidden className="mt-2 h-px w-3 bg-earth" />
-                        <span>{b}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                {service.category === "hair" ? (
+                  <div className="border border-border bg-cream p-8 sm:p-10">
+                    <p className="eyebrow">Benefits</p>
+                    <ul className="mt-5 space-y-3 text-sm leading-7 text-charcoal-soft">
+                      {service.benefits.map((b) => (
+                        <li key={b} className="flex gap-3">
+                          <span aria-hidden className="mt-2 h-px w-3 bg-earth" />
+                          <span>{b}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ) : null}
               </div>
             </aside>
           </div>
@@ -176,7 +180,7 @@ export default async function ServiceDetailPage(
       </section>
 
       <section className="border-b border-border bg-cream">
-        {service.slug === "hair-transplant" ? (
+        {stackedOverview ? (
           <div className="mx-auto w-full max-w-7xl px-6 py-20 sm:px-8 lg:px-12 lg:py-24">
             <header className="max-w-2xl">
               <p className="eyebrow">Overview</p>
