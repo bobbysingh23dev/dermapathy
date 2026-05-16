@@ -359,6 +359,14 @@ const skinAccent: SiteImage = {
 
 export const serviceAccentImage: SiteImage = skinAccent;
 
+/** Full-bleed hero for the dedicated skin-treatment landing page. */
+export const skinTreatmentHeroImage: SiteImage = {
+  src: u("photo-1570172619644-dfd03ed5d881", 1920),
+  alt: "Medical-grade skin treatment in a calm clinic setting",
+  width: 1920,
+  height: 1280,
+};
+
 export const serviceImagesBySlug: Record<string, SiteImage> = {
   "hair-transplant": {
     src: "/images/hairPrp.png",
@@ -398,7 +406,7 @@ export const serviceImagesBySlug: Record<string, SiteImage> = {
   },
 };
 
-// ───────── TESTIMONIALS (placeholder portraits) ─────────
+// ───────── TESTIMONIALS (real patient reviews) ─────────
 export type Testimonial = {
   name: string;
   treatment: string;
@@ -409,43 +417,25 @@ export type Testimonial = {
 
 export const testimonials: Testimonial[] = [
   {
-    name: "Vikram, 38",
-    treatment: "FUE Hair Transplant",
+    name: "Bobby Singh",
+    treatment: "Skin Care",
     rating: 5,
     quote:
-      "The team designed a hairline that fits my face — not the dramatic line I'd seen elsewhere. Twelve months on, it looks completely natural.",
-    image: {
-      src: u("photo-1500648767791-00dcc994a43e", 400),
-      alt: "Testimonial portrait of Vikram",
-      width: 400,
-      height: 400,
-    },
+      "I recently visited Dr. Isha Singh's Dermapathy Skin Clinic, and I couldn't be more impressed! The clinic is well-connected and boasts a warm, welcoming atmosphere. Dr. Singh's expertise in dermatology is evident through her personalized treatment plans. My skin has never looked better! The staff is friendly and attentive, ensuring a comfortable experience. Highly recommend for anyone seeking top-notch skincare solutions!",
   },
   {
-    name: "Anjali, 31",
-    treatment: "Acne & Pigmentation Programme",
+    name: "Monk",
+    treatment: "Skin Treatment",
     rating: 5,
     quote:
-      "I'd tried everything before coming here. Dr. Iyer treated my barrier first, then my acne. My skin has been clear for over a year.",
-    image: {
-      src: u("photo-1573496359142-b8d87734a5a2", 400),
-      alt: "Testimonial portrait of Anjali",
-      width: 400,
-      height: 400,
-    },
+      "Dr. Isha Singh's Dermapathy Skin Clinic is amazing! I felt a speedy recovery after my treatment. The medicines they use are very effective and helped my skin a lot. The clinic is well connected, making it easy to get appointments. Plus, it's easily accessible, so I didn't have any trouble finding it. I highly recommend this clinic for great care!",
   },
   {
-    name: "Priya, 44",
-    treatment: "Skin Rejuvenation",
+    name: "Adnan",
+    treatment: "Dermatology Visit",
     rating: 5,
     quote:
-      "Six sessions over three months. My skin texture is the best it has been in a decade — and it still looks like my skin.",
-    image: {
-      src: u("photo-1487412947147-5cebf100ffc2", 400),
-      alt: "Testimonial portrait of Priya",
-      width: 400,
-      height: 400,
-    },
+      "I had a great experience with Dermapathy. The prices were reasonable, which I liked a lot. They also had decent coverage for different services. The care was gentle and kind, making me feel comfortable. I waited less than half an hour for my appointment, which was fast. Overall, it was an excellent visit!",
   },
 ];
 

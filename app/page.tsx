@@ -146,10 +146,10 @@ export default function HomePage() {
               </p>
             </div>
             <Link
-              href="/services"
+              href="/services/skin-treatment"
               className="text-xs uppercase tracking-[0.18em] text-charcoal hover:text-earth"
             >
-              All Skin Treatments →
+              Skin treatment →
             </Link>
           </div>
 
@@ -170,8 +170,8 @@ export default function HomePage() {
         title="Skin care that holds."
         description="Outcomes from our acne, pigmentation, and rejuvenation protocols — typically over 8–16 weeks."
         pairs={skinBeforeAfter}
-        ctaHref="/services"
-        ctaLabel="Explore Skin Treatments"
+        ctaHref="/services/skin-treatment"
+        ctaLabel="Explore skin treatment page"
         background="cream"
       />
 
