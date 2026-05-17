@@ -361,10 +361,10 @@ export const serviceAccentImage: SiteImage = skinAccent;
 
 /** Full-bleed hero for the dedicated skin-treatment landing page. */
 export const skinTreatmentHeroImage: SiteImage = {
-  src: u("photo-1570172619644-dfd03ed5d881", 1920),
-  alt: "Medical-grade skin treatment in a calm clinic setting",
-  width: 1920,
-  height: 1280,
+  src: "/images/skin-doc-hero.jpg",
+  alt: "Dermatologist performing an in-clinic skin treatment",
+  width: 1024,
+  height: 500,
 };
 
 export const serviceImagesBySlug: Record<string, SiteImage> = {

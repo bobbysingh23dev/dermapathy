@@ -111,12 +111,11 @@ export default function SkinTreatmentPage() {
             fill
             priority
             sizes="100vw"
-            className="object-cover object-[50%_30%] brightness-[0.88] contrast-[1.03]"
+            className="object-cover object-center contrast-[1.05] saturate-[1.05]"
           />
-          <div aria-hidden className="absolute inset-0 z-[1] bg-charcoal/20" />
           <div
             aria-hidden
-            className="absolute inset-0 z-[2] bg-gradient-to-b from-ivory/95 via-ivory/55 to-ivory/90 md:bg-gradient-to-r md:from-ivory md:from-0% md:via-ivory/85 md:via-45% md:to-transparent"
+            className="absolute inset-0 z-[2] bg-gradient-to-t from-ivory/95 via-ivory/35 to-transparent md:bg-gradient-to-r md:from-ivory md:from-0% md:via-ivory/40 md:via-30% md:to-transparent md:to-55%"
           />
           <div className="relative z-10 mx-auto flex min-h-[min(88vh,920px)] w-full max-w-7xl flex-col justify-end px-6 pb-14 pt-24 sm:px-8 sm:pb-16 sm:pt-28 md:justify-center md:pb-20 md:pt-32 lg:px-12">
             <div className="max-w-xl md:max-w-lg">
