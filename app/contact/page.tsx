@@ -11,6 +11,14 @@ export const metadata: Metadata = buildMetadata({
   path: "/contact",
 });
 
+const mapQuery = "Dr Isha Singh's Dermapathy Skin Clinic, Gomti Nagar, Lucknow";
+const mapEmbedSrc = `https://www.google.com/maps?q=${encodeURIComponent(
+  mapQuery,
+)}&z=16&output=embed`;
+const directionsHref = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(
+  mapQuery,
+)}`;
+
 export default function ContactPage() {
   return (
     <>
@@ -81,7 +89,15 @@ export default function ContactPage() {
               <div>
                 <dt className="eyebrow">Visit</dt>
                 <dd className="mt-2 text-base text-charcoal">
-                  {siteConfig.contact.address}
+                  <span className="block">{siteConfig.contact.address}</span>
+                  <a
+                    href={directionsHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-3 inline-block text-xs uppercase tracking-[0.18em] text-earth hover:text-charcoal"
+                  >
+                    Get directions →
+                  </a>
                 </dd>
               </div>
               <div>
@@ -95,6 +111,43 @@ export default function ContactPage() {
 
           <div className="lg:col-span-7">
             <ContactForm />
+          </div>
+        </div>
+      </section>
+
+      <section
+        aria-labelledby="find-us-title"
+        className="border-b border-border bg-ivory"
+      >
+        <div className="mx-auto w-full max-w-7xl px-6 py-20 sm:px-8 lg:px-12 lg:py-24">
+          <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+            <div className="max-w-2xl">
+              <p className="eyebrow">Find Us</p>
+              <span aria-hidden className="gold-rule" />
+              <h2
+                id="find-us-title"
+                className="mt-5 font-serif text-[2rem] leading-[1.15] tracking-tight text-charcoal sm:text-[2.5rem]"
+              >
+                Gomti Nagar, Lucknow.
+              </h2>
+            </div>
+            <a
+              href={directionsHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs uppercase tracking-[0.18em] text-charcoal hover:text-earth"
+            >
+              Get directions →
+            </a>
+          </div>
+          <div className="mt-12 overflow-hidden border border-border">
+            <iframe
+              title="Dermapathy clinic location on Google Maps"
+              src={mapEmbedSrc}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="h-90 w-full sm:h-110"
+            />
           </div>
         </div>
       </section>
