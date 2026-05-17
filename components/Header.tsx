@@ -11,30 +11,29 @@ export default function Header() {
 
   const isActive = (href: string) => {
     if (href === "/") return pathname === "/";
-    if (href === "/services") return pathname === "/services";
     return pathname === href || pathname.startsWith(`${href}/`);
   };
 
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-ivory/85 backdrop-blur supports-[backdrop-filter]:bg-ivory/70">
-      <div className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-6 sm:px-8 lg:px-12">
+      <div className="flex h-20 w-full items-center gap-6 px-6 sm:px-8 lg:px-12">
         <Link
           href="/"
           aria-label={`${siteConfig.name} home`}
-          className="font-serif text-2xl tracking-[0.18em] text-charcoal sm:text-[1.6rem]"
+          className="shrink-0 font-serif text-xl tracking-[0.14em] text-charcoal sm:text-2xl"
         >
           {siteConfig.name.toUpperCase()}
         </Link>
 
         <nav
           aria-label="Primary"
-          className="hidden items-center gap-9 md:flex"
+          className="hidden flex-1 items-center justify-center gap-x-6 xl:flex"
         >
           {siteConfig.nav.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className={`text-[0.8rem] uppercase tracking-[0.18em] transition-colors ${
+              className={`whitespace-nowrap text-[0.72rem] uppercase tracking-[0.14em] transition-colors ${
                 isActive(item.href)
                   ? "text-charcoal"
                   : "text-muted hover:text-charcoal"
@@ -45,7 +44,7 @@ export default function Header() {
           ))}
         </nav>
 
-        <div className="hidden md:block">
+        <div className="hidden shrink-0 xl:block">
           <Link href="/contact" className="btn-primary text-xs">
             Book Consultation
           </Link>
@@ -56,7 +55,7 @@ export default function Header() {
           aria-label="Toggle menu"
           aria-expanded={open}
           onClick={() => setOpen((o) => !o)}
-          className="flex h-10 w-10 items-center justify-center md:hidden"
+          className="ml-auto flex h-10 w-10 items-center justify-center xl:hidden"
         >
           <span className="relative block h-3 w-5">
             <span
@@ -74,10 +73,10 @@ export default function Header() {
       </div>
 
       {open && (
-        <div className="border-t border-border bg-ivory md:hidden">
+        <div className="border-t border-border bg-ivory xl:hidden">
           <nav
             aria-label="Mobile"
-            className="mx-auto flex w-full max-w-7xl flex-col gap-1 px-6 py-6"
+            className="flex w-full flex-col gap-1 px-6 py-6 sm:px-8"
           >
             {siteConfig.nav.map((item) => (
               <Link

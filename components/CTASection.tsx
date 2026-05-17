@@ -16,8 +16,8 @@ export default function CTASection({
   description = "Book a consultation and let our dermatologists design a treatment plan that suits your skin, hair, and goals.",
   primaryHref = "/contact",
   primaryLabel = "Book a Consultation",
-  secondaryHref = "/services",
-  secondaryLabel = "Explore Services",
+  secondaryHref,
+  secondaryLabel,
 }: Props) {
   return (
     <section
@@ -40,9 +40,11 @@ export default function CTASection({
             <Link href={primaryHref} className="btn-primary">
               {primaryLabel}
             </Link>
-            <Link href={secondaryHref} className="btn-secondary">
-              {secondaryLabel}
-            </Link>
+            {secondaryHref && secondaryLabel && (
+              <Link href={secondaryHref} className="btn-secondary">
+                {secondaryLabel}
+              </Link>
+            )}
           </div>
         </div>
       </div>

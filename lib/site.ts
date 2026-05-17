@@ -35,7 +35,6 @@ export const siteConfig = {
     { label: "About", href: "/about" },
     { label: "Hair transplant", href: "/services/hair-transplant" },
     { label: "Skin treatment", href: "/services/skin-treatment" },
-    { label: "Treatments", href: "/services" },
     { label: "Blog", href: "/blog" },
     { label: "Contact", href: "/contact" },
   ],

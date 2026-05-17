@@ -99,7 +99,6 @@ export default function SkinTreatmentPage() {
           <Breadcrumbs
             items={[
               { name: "Home", href: "/" },
-              { name: "Treatments", href: "/services" },
               { name: "Skin treatment", href: "/services/skin-treatment" },
             ]}
           />
@@ -138,8 +137,8 @@ export default function SkinTreatmentPage() {
                 <Link href="/contact" className="btn-primary">
                   Book consultation
                 </Link>
-                <Link href="/services" className="btn-secondary">
-                  All skin treatments
+                <Link href="/services/hair-transplant" className="btn-secondary">
+                  Hair transplant
                 </Link>
               </div>
             </div>

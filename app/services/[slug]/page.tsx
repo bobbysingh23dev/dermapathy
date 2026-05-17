@@ -44,6 +44,29 @@ export default async function ServiceDetailPage(
   const stackedOverview =
     service.slug === "hair-transplant" || service.category === "skin";
 
+  const isHairFlagship = service.slug === "hair-transplant";
+  const hub =
+    service.category === "hair"
+      ? { name: "Hair transplant", href: "/services/hair-transplant" }
+      : { name: "Skin treatment", href: "/services/skin-treatment" };
+
+  const breadcrumbItems = isHairFlagship
+    ? [
+        { name: "Home", href: "/" },
+        { name: "Hair transplant", href: "/services/hair-transplant" },
+      ]
+    : [
+        { name: "Home", href: "/" },
+        hub,
+        { name: service.title, href: `/services/${service.slug}` },
+      ];
+
+  const secondary = isHairFlagship
+    ? { href: "/services/skin-treatment", label: "Skin treatment" }
+    : service.category === "hair"
+      ? { href: "/services/hair-transplant", label: "All hair treatments" }
+      : { href: "/services/skin-treatment", label: "All skin treatments" };
+
   return (
     <>
       <script
@@ -61,19 +84,7 @@ export default async function ServiceDetailPage(
 
       <section className="border-b border-border bg-ivory">
         <div className="mx-auto w-full max-w-7xl px-6 pt-12 sm:px-8 lg:px-12">
-          <Breadcrumbs
-            items={[
-              { name: "Home", href: "/" },
-              { name: "Treatments", href: "/services" },
-              {
-                name:
-                  service.slug === "hair-transplant"
-                    ? "Hair transplant"
-                    : service.title,
-                href: `/services/${service.slug}`,
-              },
-            ]}
-          />
+          <Breadcrumbs items={breadcrumbItems} />
         </div>
 
         {service.slug === "hair-transplant" ? (
@@ -114,8 +125,8 @@ export default async function ServiceDetailPage(
                     <Link href="/contact" className="btn-primary">
                       Book consultation
                     </Link>
-                    <Link href="/services" className="btn-secondary">
-                      All hair treatments
+                    <Link href={secondary.href} className="btn-secondary">
+                      {secondary.label}
                     </Link>
                   </div>
                 </div>
@@ -139,10 +150,8 @@ export default async function ServiceDetailPage(
                 <Link href="/contact" className="btn-primary">
                   Book Consultation
                 </Link>
-                <Link href="/services" className="btn-secondary">
-                  {service.category === "hair"
-                    ? "All hair treatments"
-                    : "All skin treatments"}
+                <Link href={secondary.href} className="btn-secondary">
+                  {secondary.label}
                 </Link>
               </div>
             </div>
