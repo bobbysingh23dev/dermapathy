@@ -8,6 +8,7 @@ import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
 import BeforeAfterSection from "@/components/BeforeAfterSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
+import WhyDermapathy from "@/components/WhyDermapathy";
 import { hairServices, skinServices } from "@/lib/services";
 import { blogs } from "@/lib/blogs";
 import {
@@ -252,6 +253,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <WhyDermapathy />
 
       <TestimonialsSection />
 

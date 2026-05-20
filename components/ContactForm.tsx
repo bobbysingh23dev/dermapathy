@@ -17,7 +17,7 @@ function Field({ label, id, ...rest }: FieldProps) {
       <input
         id={id}
         {...rest}
-        className="border-b border-border bg-transparent py-3 text-sm text-charcoal placeholder:text-muted focus:border-charcoal focus:outline-none"
+        className="border-b border-border bg-transparent py-3 text-sm text-charcoal placeholder:text-muted focus:border-charcoal focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-earth"
       />
     </div>
   );
@@ -99,7 +99,7 @@ export default function ContactForm() {
           <select
             id="topic"
             name="topic"
-            className="border-b border-border bg-transparent py-3 text-sm text-charcoal focus:border-charcoal focus:outline-none"
+            className="border-b border-border bg-transparent py-3 text-sm text-charcoal focus:border-charcoal focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-earth"
             defaultValue=""
           >
             <option value="" disabled>
@@ -125,7 +125,7 @@ export default function ContactForm() {
           name="message"
           rows={5}
           required
-          className="w-full resize-none border border-border bg-transparent p-4 text-sm leading-7 text-charcoal focus:border-charcoal focus:outline-none"
+          className="w-full resize-none border border-border bg-transparent p-4 text-sm leading-7 text-charcoal focus:border-charcoal focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-earth"
           placeholder="Briefly tell us what you're looking for…"
         />
       </div>

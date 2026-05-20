@@ -3,8 +3,14 @@ import { Cormorant_Garamond, Inter, Parisienne } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import FloatingContact from "@/components/FloatingContact";
+import Analytics from "@/components/Analytics";
 import { siteConfig } from "@/lib/site";
-import { organizationJsonLd, websiteJsonLd } from "@/lib/seo";
+import {
+  organizationJsonLd,
+  websiteJsonLd,
+  medicalClinicJsonLd,
+} from "@/lib/seo";
 
 const display = Cormorant_Garamond({
   variable: "--font-display",
@@ -93,11 +99,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${display.variable} ${body.variable} ${script.variable}`} suppressHydrationWarning>
+    <html lang="en-IN" className={`${display.variable} ${body.variable} ${script.variable}`} suppressHydrationWarning>
       <body
         className="min-h-screen flex flex-col bg-ivory text-charcoal antialiased"
         suppressHydrationWarning
       >
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-60 focus:bg-charcoal focus:px-5 focus:py-3 focus:text-sm focus:text-ivory"
+        >
+          Skip to content
+        </a>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -107,12 +119,22 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
+            __html: JSON.stringify(medicalClinicJsonLd()),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
             __html: JSON.stringify(websiteJsonLd()),
           }}
         />
         <Header />
-        <main className="flex-1">{children}</main>
+        <main id="main-content" className="flex-1">
+          {children}
+        </main>
         <Footer />
+        <FloatingContact />
+        <Analytics />
       </body>
     </html>
   );

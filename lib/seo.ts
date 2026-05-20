@@ -93,6 +93,35 @@ export function organizationJsonLd() {
   };
 }
 
+export function medicalClinicJsonLd() {
+  const c = siteConfig.contact;
+  return {
+    "@context": "https://schema.org",
+    "@type": ["MedicalClinic", "LocalBusiness"],
+    "@id": `${siteConfig.url}/#clinic`,
+    name: siteConfig.name,
+    url: siteConfig.url,
+    logo: `${siteConfig.url}/logo.png`,
+    image: `${siteConfig.url}${siteConfig.ogImage}`,
+    description: siteConfig.description,
+    telephone: c.phone.replace(/\s/g, ""),
+    email: c.email,
+    medicalSpecialty: "Dermatology",
+    priceRange: "₹₹",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: c.street,
+      addressLocality: c.locality,
+      addressRegion: c.region,
+      postalCode: c.postalCode,
+      addressCountry: c.country,
+    },
+    areaServed: { "@type": "City", name: "Lucknow" },
+    openingHours: c.openingHours,
+    sameAs: [siteConfig.social.instagram, siteConfig.social.facebook],
+  };
+}
+
 export function websiteJsonLd() {
   return {
     "@context": "https://schema.org",

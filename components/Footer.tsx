@@ -104,9 +104,20 @@ export default function Footer() {
           <p>
             © {year} {siteConfig.name}. All rights reserved.
           </p>
-          <p className="tracking-wide">
-            Dermatologist-led care for hair and skin.
-          </p>
+          <nav
+            aria-label="Legal"
+            className="flex flex-wrap items-center gap-x-5 gap-y-2"
+          >
+            <Link href="/privacy" className="hover:text-earth">
+              Privacy Policy
+            </Link>
+            <Link href="/disclaimer" className="hover:text-earth">
+              Medical Disclaimer
+            </Link>
+            <span className="tracking-wide">
+              Dermatologist-led care for hair and skin.
+            </span>
+          </nav>
         </div>
       </div>
     </footer>
