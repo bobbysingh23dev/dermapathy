@@ -89,7 +89,7 @@ export default function HomePage() {
                 Hair restoration that ages well.
               </h2>
               <p className="mt-5 text-base leading-8 text-muted">
-                Advanced FUE and DHT hair transplant procedures, PRP therapy,
+                Advanced FUE and Direct Hair Implantation procedures, PRP therapy,
                 and medical-grade scalp care — designed and performed by
                 experienced surgeons.
               </p>

@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     "dermatology",
     "hair transplant",
     "FUE hair transplant",
-    "DHT hair transplant",
+    "Direct Hair Implantation",
     "PRP hair therapy",
     "skin rejuvenation",
     "acne treatment",

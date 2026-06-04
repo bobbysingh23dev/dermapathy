@@ -94,7 +94,7 @@ export default function AboutPage() {
             <div className="mt-7 space-y-5 text-base leading-8 text-muted">
               <p>
                 {siteConfig.name} began as a hair restoration practice. Our
-                lead surgeon spent years refining FUE and DHT technique to a
+                lead surgeon spent years refining the FUE method and Direct Hair Implantation to a
                 level where hairlines could look not just dense, but
                 age-appropriate and undetectable.
               </p>

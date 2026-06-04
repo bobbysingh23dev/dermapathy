@@ -16,16 +16,17 @@ export type Service = {
 export const services: Service[] = [
   // ───────── HAIR ─────────
   {
-    title: "Hair Transplant (FUE & DHT)",
+    title: "Hair Transplant (FUE & Direct Hair Implantation)",
     slug: "hair-transplant",
     category: "hair",
-    metaTitle: "Hair Transplant — Advanced FUE & DHT Procedures | Dermapathy",
+    metaTitle:
+      "Hair Transplant — FUE & Direct Hair Implantation | Dermapathy",
     metaDescription:
-      "Advanced hair transplant at Dermapathy — Follicular Unit Extraction (FUE) and Direct Hair Transplant (DHT) for natural, permanent hair restoration with minimal downtime.",
+      "Advanced hair transplant at Dermapathy — Follicular Unit Extraction (FUE) and Direct Hair Implantation for natural, permanent hair restoration with minimal downtime.",
     shortDescription:
-      "Permanent, natural-looking hair restoration through advanced FUE and DHT techniques.",
+      "Permanent, natural-looking hair restoration through the FUE method and Direct Hair Implantation.",
     longDescription:
-      "Our hair transplant programme combines two of the most refined techniques in modern dermatology — Follicular Unit Extraction (FUE) and Direct Hair Transplant (DHT). Each graft is harvested individually and placed by hand to follow your natural hairline, density, and growth direction. Procedures are performed under local anaesthesia in our day-care clinic, with most patients returning to office work within a week.",
+      "Our hair transplant programme combines two of the most refined techniques in modern dermatology — Follicular Unit Extraction (FUE) and Direct Hair Implantation. Each graft is harvested individually and placed by hand to follow your natural hairline, density, and growth direction. Procedures are performed under local anaesthesia in our day-care clinic, with most patients returning to office work within a week.",
     benefits: [
       "Natural, permanent results designed around your hairline",
       "Minimally invasive — local anaesthesia, no stitches",
@@ -46,7 +47,7 @@ export const services: Service[] = [
       {
         step: "Procedure",
         description:
-          "FUE or DHT performed under local anaesthesia in a single session, typically 6–8 hours.",
+          "FUE or Direct Hair Implantation performed under local anaesthesia in a single session, typically 6–8 hours.",
       },
       {
         step: "Aftercare",

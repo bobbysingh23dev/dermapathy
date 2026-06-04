@@ -13,14 +13,15 @@ export type BlogPost = {
 
 export const blogs: BlogPost[] = [
   {
-    title: "FUE vs DHT — Which Hair Transplant Technique Is Right for You?",
+    title:
+      "FUE vs Direct Hair Implantation — Which Hair Transplant Technique Is Right for You?",
     slug: "fue-vs-dht-hair-transplant",
     metaTitle:
-      "FUE vs DHT Hair Transplant — Which Technique Is Right for You?",
+      "FUE vs Direct Hair Implantation — Which Technique Is Right for You?",
     metaDescription:
-      "A clear, dermatologist-written comparison of FUE and DHT hair transplant techniques — how each works, who they suit, and what results to expect.",
+      "A clear, dermatologist-written comparison of the FUE method and Direct Hair Implantation — how each works, who they suit, and what results to expect.",
     excerpt:
-      "Both FUE and DHT can deliver excellent results — but they suit different patients. Here is how we choose between them in our practice.",
+      "Both the FUE method and Direct Hair Implantation can deliver excellent results — but they suit different patients. Here is how we choose between them in our practice.",
     publishedDate: "2026-04-22",
     author: "Dr. Aarav Mehta",
     category: "Hair Transplant",
@@ -31,12 +32,12 @@ export const blogs: BlogPost[] = [
         body: "Follicular Unit Extraction (FUE) harvests individual follicular units from the donor area using a tiny circular punch. The grafts are then implanted one by one into the recipient zone. There are no linear scars and recovery is quick — most patients return to office work within a week.",
       },
       {
-        heading: "How DHT (Direct Hair Transplant) differs",
-        body: "DHT is a refinement of FUE in which extracted grafts are implanted immediately, without an intermediate holding step. This shortens the time grafts spend out of the body, which can improve survival rates and growth density in the right hands.",
+        heading: "How Direct Hair Implantation differs",
+        body: "Direct Hair Implantation is a refinement of the FUE method in which extracted grafts are implanted immediately, without an intermediate holding step. This shortens the time grafts spend out of the body, which can improve survival rates and growth density in the right hands.",
       },
       {
         heading: "Who suits which technique",
-        body: "FUE is the workhorse — appropriate for most patients seeking a natural restoration. DHT shines when graft survival needs to be maximised, such as in cases with limited donor area or tight density goals. Your dermatologist will recommend the right approach after a scalp assessment.",
+        body: "The FUE method is the workhorse — appropriate for most patients seeking a natural restoration. Direct Hair Implantation shines when graft survival needs to be maximised, such as in cases with limited donor area or tight density goals. Your dermatologist will recommend the right approach after a scalp assessment.",
       },
       {
         heading: "Results and timelines",

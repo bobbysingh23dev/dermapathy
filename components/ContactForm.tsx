@@ -105,7 +105,7 @@ export default function ContactForm() {
             <option value="" disabled>
               Select an option
             </option>
-            <option>Hair Transplant (FUE / DHT)</option>
+            <option>Hair Transplant (FUE / Direct Hair Implantation)</option>
             <option>PRP Hair Therapy</option>
             <option>Scalp Treatment</option>
             <option>Skin Rejuvenation</option>
