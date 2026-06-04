@@ -118,16 +118,16 @@ export const hairTransplantGalleryPairs: BeforeAfterPair[] = [
     label: "Hair comparison IV",
     description: hairGalleryDescription,
     before: {
-      src: "/images/H4B.png",
+      src: "/images/HB4.png",
       alt: "Hair restoration — before",
-      width: 427,
-      height: 414,
+      width: 1122,
+      height: 1402,
     },
     after: {
-      src: "/images/H4A.png",
+      src: "/images/HA4.png",
       alt: "Hair restoration — after",
-      width: 412,
-      height: 414,
+      width: 1254,
+      height: 1254,
     },
   },
   {
