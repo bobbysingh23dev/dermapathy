@@ -238,78 +238,78 @@ export const hairTransplantGalleryPairs: BeforeAfterPair[] = [
 export const hairBeforeAfter: BeforeAfterPair[] =
   hairTransplantGalleryPairs.slice(0, 4);
 
-/** File naming: B suffix = before (left), A suffix = after (right). */
+/** Skin gallery — SB = before, SA = after; numbered 1–4. */
 export const skinBeforeAfter: BeforeAfterPair[] = [
   {
     kind: "two-up",
     label: "Comparison I",
     description:
-      "Dermatologist-supervised protocol — separate baseline (B) and follow-up (A) photographs.",
+      "Dermatologist-supervised protocol — separate baseline (before) and follow-up (after) photographs.",
     before: {
-      src: "/images/skin1B.png",
+      src: "/images/SB1.png",
       alt: "Skin — before treatment",
-      width: 613,
-      height: 1009,
+      width: 1090,
+      height: 1443,
     },
     after: {
-      src: "/images/skin1A.png",
+      src: "/images/SA1.png",
       alt: "Skin — after treatment",
-      width: 534,
-      height: 1002,
+      width: 952,
+      height: 1653,
     },
   },
   {
     kind: "two-up",
     label: "Comparison II",
     description:
-      "Dermatologist-supervised protocol — separate baseline (B) and follow-up (A) photographs.",
+      "Dermatologist-supervised protocol — separate baseline (before) and follow-up (after) photographs.",
     before: {
-      src: "/images/Skin2B.png",
+      src: "/images/SB2.png",
       alt: "Skin — before treatment",
-      width: 592,
-      height: 988,
+      width: 1065,
+      height: 1476,
     },
     after: {
-      src: "/images/Skin2A.png",
+      src: "/images/SA2.png",
       alt: "Skin — after treatment",
-      width: 594,
-      height: 1012,
+      width: 1086,
+      height: 1448,
     },
   },
   {
     kind: "two-up",
     label: "Comparison III",
     description:
-      "Dermatologist-supervised protocol — separate baseline (B) and follow-up (A) photographs.",
+      "Dermatologist-supervised protocol — separate baseline (before) and follow-up (after) photographs.",
     before: {
-      src: "/images/Skin3B.png",
+      src: "/images/SB3.png",
       alt: "Skin — before treatment",
-      width: 224,
-      height: 111,
+      width: 1774,
+      height: 887,
     },
     after: {
-      src: "/images/Skin3A.png",
+      src: "/images/SA3.png",
       alt: "Skin — after treatment",
-      width: 224,
-      height: 111,
+      width: 1774,
+      height: 887,
     },
   },
   {
     kind: "two-up",
     label: "Comparison IV",
     description:
-      "Dermatologist-supervised protocol — separate baseline (B) and follow-up (A) photographs.",
+      "Dermatologist-supervised protocol — separate baseline (before) and follow-up (after) photographs.",
     before: {
-      src: "/images/Skin4B.png",
+      src: "/images/SB4.png",
       alt: "Skin — before treatment",
-      width: 582,
-      height: 879,
+      width: 1042,
+      height: 1509,
     },
     after: {
-      src: "/images/Skin4A.png",
+      src: "/images/SA4.png",
       alt: "Skin — after treatment",
-      width: 574,
-      height: 909,
+      width: 1044,
+      height: 1507,
     },
   },
 ];
