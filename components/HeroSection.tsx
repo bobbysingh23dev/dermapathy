@@ -60,9 +60,7 @@ export default function HeroSection() {
 
       {/* Centred headline overlay */}
       <div className="pointer-events-none absolute inset-0 z-10 flex flex-col items-center justify-center px-6 text-center">
-        <p className="eyebrow text-charcoal-soft">
-          Dermatology · Hair · Skin
-        </p>
+        <p className="eyebrow text-charcoal-soft">Dermatology · Hair · Skin</p>
 
         <h1
           id="hero-title"

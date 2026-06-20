@@ -1,4 +1,4 @@
-import Men from "./men.jpg";
+import Men from "./right-banner-img.png";
 import Women from "./women.jpg";
 import Dr from "./docter.png";
 
