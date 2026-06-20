@@ -5,7 +5,9 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import BeforeAfterSection from "@/components/BeforeAfterSection";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
+import TreatmentCatalog from "@/components/TreatmentCatalog";
 import { skinServices } from "@/lib/services";
+import { skinTreatmentCatalog } from "@/lib/treatments";
 import { skinTreatmentHeroImage, skinBeforeAfter } from "@/lib/images";
 import { buildMetadata, serviceJsonLd } from "@/lib/seo";
 
@@ -205,6 +207,14 @@ export default function SkinTreatmentPage() {
           </ol>
         </div>
       </section>
+
+      <TreatmentCatalog
+        eyebrow="Full menu"
+        title="Skin treatments we offer."
+        description="A complete menu of medical and aesthetic skin treatments at our Gomti Nagar, Lucknow clinic — every one planned and supervised by Dr. Isha Singh."
+        groups={skinTreatmentCatalog}
+        background="cream"
+      />
 
       <BeforeAfterSection
         eyebrow="Clinical gallery"

@@ -6,7 +6,9 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import BeforeAfterSection from "@/components/BeforeAfterSection";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
+import TreatmentCatalog from "@/components/TreatmentCatalog";
 import { services, getServiceBySlug, getAllServiceSlugs } from "@/lib/services";
+import { hairTreatmentCatalog } from "@/lib/treatments";
 import { serviceImagesBySlug, serviceAccentImage, hairTransplantGalleryPairs } from "@/lib/images";
 import { buildMetadata, serviceJsonLd } from "@/lib/seo";
 
@@ -264,6 +266,16 @@ export default async function ServiceDetailPage(
           </ol>
         </div>
       </section>
+
+      {isHairFlagship ? (
+        <TreatmentCatalog
+          eyebrow="Full menu"
+          title="Hair treatments we offer."
+          description="From early hair-loss therapies to transplant procedures — our complete hair menu at the Gomti Nagar, Lucknow clinic, led by Dr. Isha Singh."
+          groups={hairTreatmentCatalog}
+          background="cream"
+        />
+      ) : null}
 
       {service.slug === "hair-transplant" ? (
         <BeforeAfterSection
