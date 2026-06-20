@@ -78,12 +78,6 @@ export default function ContactPage() {
                   >
                     {siteConfig.contact.phone}
                   </a>
-                  <a
-                    href={telHref(siteConfig.contact.phone2)}
-                    className="text-charcoal hover:text-earth"
-                  >
-                    {siteConfig.contact.phone2}
-                  </a>
                 </dd>
               </div>
               <div>

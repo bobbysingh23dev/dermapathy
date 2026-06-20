@@ -69,14 +69,6 @@ export default function Footer() {
                   {siteConfig.contact.phone}
                 </a>
               </li>
-              <li>
-                <a
-                  href={telHref(siteConfig.contact.phone2)}
-                  className="hover:text-earth"
-                >
-                  {siteConfig.contact.phone2}
-                </a>
-              </li>
               <li>{siteConfig.contact.address}</li>
             </ul>
             <div className="mt-5 flex gap-4 text-xs uppercase tracking-[0.16em] text-muted">

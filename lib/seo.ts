@@ -82,13 +82,6 @@ export function organizationJsonLd() {
         areaServed: "IN",
         availableLanguage: ["English", "Hindi"],
       },
-      {
-        "@type": "ContactPoint",
-        telephone: siteConfig.contact.phone2.replace(/\s/g, ""),
-        contactType: "customer support",
-        areaServed: "IN",
-        availableLanguage: ["English", "Hindi"],
-      },
     ],
   };
 }
@@ -203,6 +196,38 @@ export function serviceJsonLd(input: {
       url: siteConfig.url,
     },
     areaServed: "Worldwide",
+  };
+}
+
+export function physicianJsonLd(input: {
+  name: string;
+  slug: string;
+  role: string;
+  qualification: string;
+  image?: string;
+  bio: string[];
+}) {
+  const c = siteConfig.contact;
+  return {
+    "@context": "https://schema.org",
+    "@type": "Physician",
+    "@id": `${siteConfig.url}/doctors#${input.slug}`,
+    name: input.name,
+    url: `${siteConfig.url}/doctors`,
+    medicalSpecialty: "Dermatology",
+    jobTitle: input.role,
+    description: input.bio.join(" "),
+    ...(input.qualification ? { hasCredential: input.qualification } : {}),
+    ...(input.image ? { image: `${siteConfig.url}${input.image}` } : {}),
+    worksFor: { "@type": "MedicalClinic", "@id": `${siteConfig.url}/#clinic` },
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: c.street,
+      addressLocality: c.locality,
+      addressRegion: c.region,
+      postalCode: c.postalCode,
+      addressCountry: c.country,
+    },
   };
 }
 

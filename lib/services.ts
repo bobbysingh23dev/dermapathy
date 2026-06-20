@@ -4,6 +4,8 @@ export type Service = {
   title: string;
   slug: string;
   category: ServiceCategory;
+  /** Optional visible H1 override (e.g. with location for local SEO). Falls back to `title`. */
+  h1?: string;
   metaTitle: string;
   metaDescription: string;
   shortDescription: string;
@@ -19,8 +21,9 @@ export const services: Service[] = [
     title: "Hair Transplant (FUE & Direct Hair Implantation)",
     slug: "hair-transplant",
     category: "hair",
+    h1: "Hair Transplant in Lucknow — FUE & Direct Hair Implantation",
     metaTitle:
-      "Hair Transplant — FUE & Direct Hair Implantation | Dermapathy",
+      "Hair Transplant in Lucknow — FUE & Direct Hair Implantation",
     metaDescription:
       "Advanced hair transplant at Dermapathy — Follicular Unit Extraction (FUE) and Direct Hair Implantation for natural, permanent hair restoration with minimal downtime.",
     shortDescription:
@@ -139,7 +142,7 @@ export const services: Service[] = [
     title: "Scalp Treatments",
     slug: "scalp-treatments",
     category: "hair",
-    metaTitle: "Scalp Treatments — Dandruff, Itch & Scalp Health | Dermapathy",
+    metaTitle: "Scalp Treatments — Dandruff, Itch & Scalp Health",
     metaDescription:
       "Medical-grade scalp treatments for dandruff, seborrheic dermatitis, itch, and scalp inflammation — restoring a healthy foundation for hair growth.",
     shortDescription:
@@ -193,7 +196,7 @@ export const services: Service[] = [
     title: "Skin Rejuvenation & Anti-Aging",
     slug: "skin-rejuvenation",
     category: "skin",
-    metaTitle: "Skin Rejuvenation & Anti-Aging Treatments | Dermapathy",
+    metaTitle: "Skin Rejuvenation & Anti-Aging Treatments",
     metaDescription:
       "Restore tone, texture, and youthful firmness with medical-grade skin rejuvenation — combining peels, microneedling, and customised topicals.",
     shortDescription:

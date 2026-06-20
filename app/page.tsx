@@ -46,9 +46,9 @@ const journey = [
 
 const homeFaqs = [
   {
-    question: "Are your dermatologists board-certified?",
+    question: "Who will treat me at Dermapathy?",
     answer:
-      "Yes. Every consultant at Dermapathy is a qualified MD Dermatology with additional fellowship training in their specialty.",
+      "Your care is led personally by Dr. Isha Singh, a qualified MD Dermatology and the founder of Dermapathy. She plans and performs every consultation and procedure herself — your treatment is never delegated.",
   },
   {
     question: "Will my hair transplant look natural?",

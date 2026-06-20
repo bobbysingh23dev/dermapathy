@@ -1,6 +1,5 @@
 export const contactInfo = {
   phone: "+91 9650821800",
-  phone2: "+91 9140090880",
   email: "info@dermapathy.com",
   instagram: "dermapathy_clinic",
   facebook: "dermapathy",
@@ -29,7 +28,6 @@ export const siteConfig = {
   contact: {
     email: contactInfo.email,
     phone: contactInfo.phone,
-    phone2: contactInfo.phone2,
     address: contactInfo.address,
     timings: contactInfo.timings,
     street: contactInfo.street,
@@ -57,6 +55,7 @@ export const siteConfig = {
   nav: [
     { label: "Home", href: "/" },
     { label: "About", href: "/about" },
+    { label: "Doctors", href: "/doctors" },
     { label: "Hair transplant", href: "/services/hair-transplant" },
     { label: "Skin treatment", href: "/services/skin-treatment" },
     { label: "Blog", href: "/blog" },

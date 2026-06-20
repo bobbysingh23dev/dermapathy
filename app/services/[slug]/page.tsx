@@ -111,7 +111,7 @@ export default async function ServiceDetailPage(
                   <p className="eyebrow text-charcoal-soft">Hair restoration</p>
                   <span aria-hidden className="gold-rule" />
                   <h1 className="mt-5 font-serif text-[2.5rem] leading-[1.05] tracking-tight text-charcoal sm:text-[3.25rem] lg:text-[3.5rem]">
-                    {service.title}
+                    {service.h1 ?? service.title}
                   </h1>
                   <p className="mt-6 text-base leading-8 text-muted sm:text-lg">
                     {service.shortDescription}
@@ -141,7 +141,7 @@ export default async function ServiceDetailPage(
               </p>
               <span aria-hidden className="gold-rule" />
               <h1 className="mt-5 font-serif text-[2.5rem] leading-[1.05] tracking-tight text-charcoal sm:text-[3.25rem]">
-                {service.title}
+                {service.h1 ?? service.title}
               </h1>
               <p className="mt-6 max-w-xl text-base leading-8 text-muted sm:text-lg">
                 {service.shortDescription}

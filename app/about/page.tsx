@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
@@ -56,10 +57,14 @@ export default function AboutPage() {
           </div>
           <div className="lg:col-span-5">
             <p className="text-base leading-8 text-muted sm:text-lg">
-              {siteConfig.name} was founded by a small team of dermatologists
+              {siteConfig.name} was founded by Dr. Isha Singh, a dermatologist
               committed to two things: doing fewer procedures, but doing them
               exceptionally — and being honest with patients about what care
-              can and cannot deliver.
+              can and cannot deliver.{" "}
+              <Link href="/doctors" className="underline underline-offset-4 hover:text-charcoal">
+                Meet Dr. Isha Singh
+              </Link>
+              .
             </p>
           </div>
         </div>
@@ -93,16 +98,16 @@ export default function AboutPage() {
             />
             <div className="mt-7 space-y-5 text-base leading-8 text-muted">
               <p>
-                {siteConfig.name} began as a hair restoration practice. Our
-                lead surgeon spent years refining the FUE method and Direct Hair Implantation to a
+                {siteConfig.name} began as a hair restoration practice. Dr. Isha
+                Singh spent years refining the FUE method and Direct Hair Implantation to a
                 level where hairlines could look not just dense, but
                 age-appropriate and undetectable.
               </p>
               <p>
-                Over time, the practice deepened into skin — adding consultant
-                dermatologists with fellowships in lasers, pigmentation, and
-                medical aesthetics. Today the clinic operates two specialties
-                under one roof: hair restoration and medical-grade skin care.
+                Over time, the practice deepened into skin — extending into
+                lasers, pigmentation, and medical aesthetics. Today the clinic
+                operates two specialties under one roof: hair restoration and
+                medical-grade skin care.
               </p>
               <p>
                 What hasn&apos;t changed is the way we work. Long

@@ -23,7 +23,7 @@ export const blogs: BlogPost[] = [
     excerpt:
       "Both the FUE method and Direct Hair Implantation can deliver excellent results — but they suit different patients. Here is how we choose between them in our practice.",
     publishedDate: "2026-04-22",
-    author: "Dr. Aarav Mehta",
+    author: "Dr. Isha Singh",
     category: "Hair Transplant",
     readingTime: "7 min read",
     content: [
@@ -54,7 +54,7 @@ export const blogs: BlogPost[] = [
     excerpt:
       "Adult acne is rarely about one thing. It is usually a combination — and treating it well means addressing the right driver first.",
     publishedDate: "2026-04-08",
-    author: "Dr. Meera Iyer",
+    author: "Dr. Isha Singh",
     category: "Skin Care",
     readingTime: "6 min read",
     content: [
@@ -85,7 +85,7 @@ export const blogs: BlogPost[] = [
     excerpt:
       "PRP works beautifully for some patients and almost not at all for others. The difference is patient selection.",
     publishedDate: "2026-03-18",
-    author: "Dr. Aarav Mehta",
+    author: "Dr. Isha Singh",
     category: "Hair Care",
     readingTime: "5 min read",
     content: [
@@ -112,7 +112,7 @@ export const blogs: BlogPost[] = [
     excerpt:
       "Sunscreen is the single most effective anti-aging product available. Here is how to choose and use one that actually works.",
     publishedDate: "2026-02-28",
-    author: "Dr. Meera Iyer",
+    author: "Dr. Isha Singh",
     category: "Skin Care",
     readingTime: "6 min read",
     content: [
